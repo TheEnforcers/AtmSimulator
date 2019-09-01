@@ -1,3 +1,6 @@
+
+import java.awt.Toolkit;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,16 +11,13 @@
  *
  * @author sarve
  */
-import java.awt.Toolkit;
-
-public class card extends javax.swing.JFrame {
+public class cpin extends javax.swing.JFrame {
 
     /**
-     * Creates new form card
+     * Creates new form cpin
      */
-    public card() {
-        
-        this.setUndecorated(true);
+    public cpin() {
+         this.setUndecorated(true);
         
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         double width = toolkit.getScreenSize().getWidth();
@@ -26,7 +26,6 @@ public class card extends javax.swing.JFrame {
         
         this.setSize((int)width, (int)height);
         initComponents();
-        
     }
 
     /**
@@ -39,50 +38,36 @@ public class card extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        cardslot = new javax.swing.JLabel();
-        card = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        Pls_insert = new javax.swing.JLabel();
-        Welcome = new javax.swing.JLabel();
-        atm_bg = new javax.swing.JLabel();
+        b1 = new javax.swing.JButton();
+        pinpass = new javax.swing.JPasswordField();
+        cpin_txt = new javax.swing.JLabel();
+        atmbg = new javax.swing.JLabel();
         main_bg = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 153, 153));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1370, 670));
         jPanel1.setLayout(null);
 
-        cardslot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(cardslot);
-        cardslot.setBounds(910, 470, 100, 40);
-
-        card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tide1.jpg"))); // NOI18N
-        jPanel1.add(card);
-        card.setBounds(920, 580, 74, 120);
-
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        b1.setText("1");
+        b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                b1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(930, 590, 60, 100);
+        jPanel1.add(b1);
+        b1.setBounds(570, 600, 60, 30);
+        jPanel1.add(pinpass);
+        pinpass.setBounds(610, 310, 200, 40);
 
-        Pls_insert.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        Pls_insert.setText("please insert the card");
-        jPanel1.add(Pls_insert);
-        Pls_insert.setBounds(580, 310, 260, 40);
+        cpin_txt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        cpin_txt.setText("ENTER CUSTOMER PIN");
+        jPanel1.add(cpin_txt);
+        cpin_txt.setBounds(570, 220, 300, 60);
 
-        Welcome.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        Welcome.setText("Welcome");
-        jPanel1.add(Welcome);
-        Welcome.setBounds(600, 220, 240, 40);
-
-        atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
-        jPanel1.add(atm_bg);
-        atm_bg.setBounds(520, 190, 380, 240);
+        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
+        jPanel1.add(atmbg);
+        atmbg.setBounds(520, 190, 380, 240);
 
         main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
         jPanel1.add(main_bg);
@@ -96,25 +81,23 @@ public class card extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(287, 287, 287))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
-        
-         insert i1 =new insert();
-         i1.setVisible(true);
-         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_b1ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -133,33 +116,31 @@ public class card extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(card.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cpin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(card.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cpin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(card.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cpin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(card.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cpin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new card().setVisible(true);
+                new cpin().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
-    private javax.swing.JLabel Pls_insert;
-    private javax.swing.JLabel Welcome;
-    private javax.swing.JLabel atm_bg;
-    private javax.swing.JLabel card;
-    private javax.swing.JLabel cardslot;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel atmbg;
+    private javax.swing.JButton b1;
+    private javax.swing.JLabel cpin_txt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
+    private javax.swing.JPasswordField pinpass;
     // End of variables declaration//GEN-END:variables
 }
