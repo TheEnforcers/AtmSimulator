@@ -46,7 +46,7 @@ public class lang extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        hindi_txt = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         arrowhin = new javax.swing.JLabel();
         english_txt = new javax.swing.JLabel();
         arroweng = new javax.swing.JLabel();
@@ -60,11 +60,11 @@ public class lang extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        hindi_txt.setFont(new java.awt.Font("Adobe Devanagari", 1, 26)); // NOI18N
-        hindi_txt.setForeground(new java.awt.Color(255, 255, 255));
-        hindi_txt.setText(" हिंदी");
-        jPanel1.add(hindi_txt);
-        hindi_txt.setBounds(860, 380, 40, 50);
+        jLabel6.setFont(new java.awt.Font("Adobe Devanagari", 1, 26)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText(" हिंदी");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(860, 380, 40, 50);
 
         arrowhin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
         jPanel1.add(arrowhin);
@@ -122,8 +122,8 @@ public class lang extends javax.swing.JFrame {
 
     private void engbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_engbtActionPerformed
         // TODO add your handling code here:
-         service s1 =new service();
-         s1.setVisible(true);
+         cpin cp1=new cpin();
+         cp1.setVisible(true);
          dispose();
     }//GEN-LAST:event_engbtActionPerformed
 
@@ -170,7 +170,7 @@ public class lang extends javax.swing.JFrame {
     private javax.swing.JLabel ctlang;
     private javax.swing.JButton engbt;
     private javax.swing.JLabel english_txt;
-    private javax.swing.JLabel hindi_txt;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     // End of variables declaration//GEN-END:variables

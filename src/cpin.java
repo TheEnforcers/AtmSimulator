@@ -1,4 +1,5 @@
 
+import java.awt.Button;
 import java.awt.Toolkit;
 
 /*
@@ -11,8 +12,16 @@ import java.awt.Toolkit;
  *
  * @author sarve
  */
-public class cpin extends javax.swing.JFrame {
 
+    
+
+public class cpin extends javax.swing.JFrame {
+    int i=-1;
+    String out;
+    int j;
+    char inpass[];
+    char pin[]=new char[6];
+    
     /**
      * Creates new form cpin
      */
@@ -27,6 +36,7 @@ public class cpin extends javax.swing.JFrame {
         this.setSize((int)width, (int)height);
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,7 +48,19 @@ public class cpin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        pin1 = new javax.swing.JTextField();
         b1 = new javax.swing.JButton();
+        b2 = new javax.swing.JButton();
+        b3 = new javax.swing.JButton();
+        b4 = new javax.swing.JButton();
+        b5 = new javax.swing.JButton();
+        b6 = new javax.swing.JButton();
+        b7 = new javax.swing.JButton();
+        b8 = new javax.swing.JButton();
+        b9 = new javax.swing.JButton();
+        b_enter = new javax.swing.JButton();
+        b_clear = new javax.swing.JButton();
+        b_cancel = new javax.swing.JButton();
         pinpass = new javax.swing.JPasswordField();
         cpin_txt = new javax.swing.JLabel();
         atmbg = new javax.swing.JLabel();
@@ -49,6 +71,14 @@ public class cpin extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
+        pin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pin1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(pin1);
+        pin1.setBounds(550, 370, 260, 40);
+
         b1.setText("1");
         b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +87,111 @@ public class cpin extends javax.swing.JFrame {
         });
         jPanel1.add(b1);
         b1.setBounds(570, 600, 60, 30);
+
+        b2.setText("2");
+        b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b2);
+        b2.setBounds(650, 600, 60, 30);
+
+        b3.setText("3");
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b3);
+        b3.setBounds(720, 600, 60, 30);
+
+        b4.setText("4");
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b4);
+        b4.setBounds(573, 650, 60, 30);
+
+        b5.setText("5");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b5);
+        b5.setBounds(650, 650, 60, 30);
+
+        b6.setText("6");
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b6);
+        b6.setBounds(720, 650, 60, 30);
+
+        b7.setText("7");
+        b7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b7);
+        b7.setBounds(570, 700, 60, 20);
+
+        b8.setText("8");
+        b8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b8);
+        b8.setBounds(650, 700, 60, 20);
+
+        b9.setText("9");
+        b9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b9);
+        b9.setBounds(720, 700, 60, 20);
+
+        b_enter.setText("ENTER");
+        b_enter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_enterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b_enter);
+        b_enter.setBounds(790, 600, 60, 30);
+
+        b_clear.setText("CLEAR");
+        b_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_clearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b_clear);
+        b_clear.setBounds(790, 650, 65, 30);
+
+        b_cancel.setText("CANCEL");
+        b_cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_cancelActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b_cancel);
+        b_cancel.setBounds(790, 700, 60, 20);
+
+        pinpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pinpassActionPerformed(evt);
+            }
+        });
         jPanel1.add(pinpass);
         pinpass.setBounds(610, 310, 200, 40);
 
@@ -96,8 +231,175 @@ public class cpin extends javax.swing.JFrame {
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
+       // StringBuilder sb=new StringBuilder();
+    //   if(i<7)
+     //  {
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+      // }
+        pin[i]='1';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();
     }//GEN-LAST:event_b1ActionPerformed
+    public void display()
+    {
+          String string1=new String(pin);
+        
+     pin1.setText(string1);   
+    }
+    private void pinpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pinpassActionPerformed
 
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
+        // TODO add your handling code here:
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='2';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();
+        
+    }//GEN-LAST:event_b2ActionPerformed
+
+    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='9';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        // TODO add your handling code here:
+    }//GEN-LAST:event_b9ActionPerformed
+
+    private void b_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_cancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b_cancelActionPerformed
+
+    private void pin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pin1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pin1ActionPerformed
+
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        // TODO add your handling code here:
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='3';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        
+    }//GEN-LAST:event_b3ActionPerformed
+
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+        // TODO add your handling code here:
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='4';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        
+    }//GEN-LAST:event_b4ActionPerformed
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        // TODO add your handling code here:
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='5';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        
+    }//GEN-LAST:event_b5ActionPerformed
+
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='6';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        // TODO add your handling code here:
+    }//GEN-LAST:event_b6ActionPerformed
+
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='7';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        // TODO add your handling code here:
+    }//GEN-LAST:event_b7ActionPerformed
+
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='8';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();        // TODO add your handling code here:
+    }//GEN-LAST:event_b8ActionPerformed
+
+    private void b_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterActionPerformed
+        // TODO add your handling code here:
+        service s1 =new service();
+        s1.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_b_enterActionPerformed
+
+    private void b_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_clearActionPerformed
+        // TODO add your handling code here:
+        i--;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i+1]='\0';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        displayc();
+    }//GEN-LAST:event_b_clearActionPerformed
+    public void displayc()
+    {
+          String string1=new String(pin);
+        
+     pin1.setText(string1);   
+    }
+    
 
     /**
      * @param args the command line arguments
@@ -130,6 +432,7 @@ public class cpin extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new cpin().setVisible(true);
+                
             }
         });
     }
@@ -138,9 +441,21 @@ public class cpin extends javax.swing.JFrame {
     private javax.swing.JLabel BG;
     private javax.swing.JLabel atmbg;
     private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
+    private javax.swing.JButton b7;
+    private javax.swing.JButton b8;
+    private javax.swing.JButton b9;
+    private javax.swing.JButton b_cancel;
+    private javax.swing.JButton b_clear;
+    private javax.swing.JButton b_enter;
     private javax.swing.JLabel cpin_txt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
+    private javax.swing.JTextField pin1;
     private javax.swing.JPasswordField pinpass;
     // End of variables declaration//GEN-END:variables
 }
