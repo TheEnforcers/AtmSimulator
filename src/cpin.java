@@ -1,6 +1,7 @@
 
 import java.awt.Button;
 import java.awt.Toolkit;
+import java.sql.SQLException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -403,8 +404,9 @@ public class cpin extends javax.swing.JFrame {
 
     /**
      * @param args the command line arguments
+     * @throws java.sql.SQLException
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws SQLException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -429,6 +431,7 @@ public class cpin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        abc a1=new abc();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new cpin().setVisible(true);

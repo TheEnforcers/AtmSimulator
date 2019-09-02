@@ -26,12 +26,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel2" min="-2" pref="1209" max="-2" attributes="0"/>
+          <Component id="jPanel2" min="-2" pref="1370" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel2" min="-2" pref="731" max="-2" attributes="0"/>
+          <Component id="jPanel2" min="-2" pref="730" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
