@@ -2,6 +2,8 @@ import sql1.db;
 import java.awt.Button;
 import java.awt.Toolkit;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,7 +20,8 @@ import java.sql.SQLException;
 
 public class cpin extends javax.swing.JFrame {
     int i=-1;
-     static String cp;
+     int row;
+     static String cp[]=new String[20];
     static String out;
     int j;
     char inpass[];
@@ -376,8 +379,24 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterActionPerformed
-        // TODO add your handling code here:
-        compare();
+        int a;
+        try {
+            // TODO add your handling code here:
+       
+            getData();
+           
+            // System.out.println(a+ cp+ out);
+            a=compare();
+
+            if(a==1)
+            {
+            service ser1=new service();
+            ser1.setVisible(true);
+            dispose();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(cpin.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
     }//GEN-LAST:event_b_enterActionPerformed
 
@@ -400,17 +419,22 @@ public class cpin extends javax.swing.JFrame {
         
      pin1.setText(out);   
     }
-    public void compare()
+    public int compare() throws SQLException
     {
+        int r=0;
        // String str =pin;
        // char ch1 = str.charAt(1);
-       if(out.equals(cp)==true)
+       
+       // System.out.println(cp);
+        while(r<2)
         {
-        service s1 =new service();
-        s1.setVisible(true);
-        dispose(); 
+       if(out.equals(cp[r])==true)
+        {
+            return 1; 
           //  System.out.println("dhfjhfj");
-        }  /*
+        }
+        }
+       return 0;/*
        else
         {
              System.out.println("dhfjhfj");
@@ -419,13 +443,25 @@ public class cpin extends javax.swing.JFrame {
         } */
        // System.out.println(out);
     }
+    public void getData() throws SQLException
+    {
+        
+         db db1=new db();
+        
+        cp = db1.db();
+        
+    }
+    public void getData2()
+    {
+        
+    }
     
 
     /**
      * @param args the command line arguments
      * @throws java.sql.SQLException
      */
-    public static void main(String args[]) throws SQLException {
+    public static void main(String args[]) {
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -453,8 +489,7 @@ public class cpin extends javax.swing.JFrame {
         /* Create and display the form */
        
         
-        db db1=new db();
-        cp=db1.db();
+        
         
         //    System.out.println("cpin = "+ cp);
        
@@ -464,7 +499,9 @@ public class cpin extends javax.swing.JFrame {
                 new cpin().setVisible(true);
                 
             }
+       
         });
+       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

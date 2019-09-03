@@ -16,23 +16,33 @@ import java.sql.Statement;
  * @author My
  */
 public class db{
-    String cpin;
-     public String db() throws SQLException
+   // String cpin; 
+    int row;
+    int i=0;
+    String a[]=new String[20]; 
+    
+     public String[] db() throws SQLException
             {
                Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
-               System.out.println("Connection Created !!!");
+            //  System.out.println("Connection Created !!!");
                Statement st=con.createStatement();
                ResultSet rs=st.executeQuery("select * from CUSTOMER");
-               while(rs.next())
-               {
-                   cpin=rs.getString(1);
-                   System.out.println(rs.getString(2));
+              
+              while(rs.next())
+              {
+                  a[i]=rs.getString(1);
+                  i++;
+              }
+              return a;
+                   
+                   //System.out.println(rs.getRow());
+                 /*  System.out.println(rs.getString(2));
                    System.out.println(rs.getString(3));
-                   System.out.println(rs.getString(4));
-               }
-               return cpin;
+                   System.out.println(rs.getString(4)); */
+                }
+               
                
             }
-
+        
     
-}
+   
