@@ -39,6 +39,7 @@ public class cpin extends javax.swing.JFrame {
         double height = toolkit.getScreenSize().getHeight();
         
         this.setSize((int)width, (int)height);
+        
         initComponents();
     }
     
@@ -53,7 +54,6 @@ public class cpin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        pin1 = new javax.swing.JTextField();
         b1 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
         b3 = new javax.swing.JButton();
@@ -69,20 +69,13 @@ public class cpin extends javax.swing.JFrame {
         pinpass = new javax.swing.JPasswordField();
         cpin_txt = new javax.swing.JLabel();
         atmbg = new javax.swing.JLabel();
+        pin1 = new javax.swing.JTextField();
         main_bg = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
-
-        pin1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pin1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(pin1);
-        pin1.setBounds(550, 370, 260, 40);
 
         b1.setText("1");
         b1.addActionListener(new java.awt.event.ActionListener() {
@@ -209,6 +202,14 @@ public class cpin extends javax.swing.JFrame {
         jPanel1.add(atmbg);
         atmbg.setBounds(520, 190, 380, 240);
 
+        pin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pin1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(pin1);
+        pin1.setBounds(550, 370, 260, 40);
+
         main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
         jPanel1.add(main_bg);
         main_bg.setBounds(350, 0, 700, 730);
@@ -291,6 +292,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_cancelActionPerformed
         // TODO add your handling code here:
+        lang l1=new lang();
+         l1.setVisible(true);
+         dispose();
     }//GEN-LAST:event_b_cancelActionPerformed
 
     private void pin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pin1ActionPerformed
@@ -394,6 +398,13 @@ public class cpin extends javax.swing.JFrame {
             ser1.setVisible(true);
             dispose();
             }
+            else
+            {
+                wrongcpin wp1=new wrongcpin();
+                 wp1.setVisible(true);
+                 dispose();
+
+            }
         } catch (SQLException ex) {
             Logger.getLogger(cpin.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -426,14 +437,17 @@ public class cpin extends javax.swing.JFrame {
        // char ch1 = str.charAt(1);
        
        // System.out.println(cp);
-        while(r<2)
-        {
+       while(r<=1)
+         {
+       System.out.println(cp[r]);
        if(out.equals(cp[r])==true)
         {
-            return 1; 
+            return 1;
+            
           //  System.out.println("dhfjhfj");
         }
-        }
+       r++;
+          }
        return 0;/*
        else
         {
