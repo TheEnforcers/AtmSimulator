@@ -1,4 +1,4 @@
-
+import sql1.db;
 import java.awt.Button;
 import java.awt.Toolkit;
 import java.sql.SQLException;
@@ -18,7 +18,8 @@ import java.sql.SQLException;
 
 public class cpin extends javax.swing.JFrame {
     int i=-1;
-    String out;
+     static String cp;
+    static String out;
     int j;
     char inpass[];
     char pin[]=new char[6];
@@ -249,9 +250,9 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b1ActionPerformed
     public void display()
     {
-          String string1=new String(pin);
+           out=new String(pin);
         
-     pin1.setText(string1);   
+     pin1.setText(out);   
     }
     private void pinpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinpassActionPerformed
         // TODO add your handling code here:
@@ -376,9 +377,8 @@ public class cpin extends javax.swing.JFrame {
 
     private void b_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterActionPerformed
         // TODO add your handling code here:
-        service s1 =new service();
-        s1.setVisible(true);
-        dispose();
+        compare();
+       
     }//GEN-LAST:event_b_enterActionPerformed
 
     private void b_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_clearActionPerformed
@@ -396,9 +396,28 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b_clearActionPerformed
     public void displayc()
     {
-          String string1=new String(pin);
+          out=new String(pin);
         
-     pin1.setText(string1);   
+     pin1.setText(out);   
+    }
+    public void compare()
+    {
+       // String str =pin;
+       // char ch1 = str.charAt(1);
+       if(out.equals(cp)==true)
+        {
+        service s1 =new service();
+        s1.setVisible(true);
+        dispose(); 
+          //  System.out.println("dhfjhfj");
+        }  /*
+       else
+        {
+             System.out.println("dhfjhfj");
+              System.out.println(pin.equals(cp));
+              System.out.println();
+        } */
+       // System.out.println(out);
     }
     
 
@@ -407,6 +426,7 @@ public class cpin extends javax.swing.JFrame {
      * @throws java.sql.SQLException
      */
     public static void main(String args[]) throws SQLException {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -431,7 +451,14 @@ public class cpin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        abc a1=new abc();
+       
+        
+        db db1=new db();
+        cp=db1.db();
+        
+        //    System.out.println("cpin = "+ cp);
+       
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new cpin().setVisible(true);
