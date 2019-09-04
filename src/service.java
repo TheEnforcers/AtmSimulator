@@ -1,5 +1,9 @@
 
+//import balance.bal;
 import java.awt.Toolkit;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -39,7 +43,10 @@ public class service extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        card_slot = new javax.swing.JLabel();
         service_txt = new javax.swing.JLabel();
+        cash_withdrawal = new javax.swing.JButton();
+        balance = new javax.swing.JButton();
         balance_txt = new javax.swing.JLabel();
         arrowbal = new javax.swing.JLabel();
         cash_with_txt = new javax.swing.JLabel();
@@ -52,39 +59,61 @@ public class service extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        service_txt.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(card_slot);
+        card_slot.setBounds(900, 470, 120, 40);
+
+        service_txt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         service_txt.setText("select the service");
         jPanel1.add(service_txt);
-        service_txt.setBounds(520, 250, 315, 80);
+        service_txt.setBounds(600, 170, 315, 80);
+
+        cash_withdrawal.setText("cash");
+        cash_withdrawal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cash_withdrawalActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cash_withdrawal);
+        cash_withdrawal.setBounds(920, 250, 73, 23);
+
+        balance.setText("balance");
+        balance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                balanceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(balance);
+        balance.setBounds(920, 280, 71, 30);
 
         balance_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         balance_txt.setForeground(new java.awt.Color(255, 255, 255));
         balance_txt.setText("BALANCE ENQUIRY");
         jPanel1.add(balance_txt);
-        balance_txt.setBounds(770, 380, 160, 40);
+        balance_txt.setBounds(750, 290, 160, 40);
 
         arrowbal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
         jPanel1.add(arrowbal);
-        arrowbal.setBounds(770, 380, 160, 40);
+        arrowbal.setBounds(740, 290, 160, 40);
 
         cash_with_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cash_with_txt.setForeground(new java.awt.Color(255, 255, 255));
         cash_with_txt.setText("CASH WITHDRAWAL");
         jPanel1.add(cash_with_txt);
-        cash_with_txt.setBounds(770, 330, 160, 40);
+        cash_with_txt.setBounds(740, 240, 160, 40);
 
         arrowcw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
         jPanel1.add(arrowcw);
-        arrowcw.setBounds(770, 330, 160, 40);
+        arrowcw.setBounds(740, 240, 160, 40);
 
         atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atmbg);
-        atmbg.setBounds(435, 248, 500, 320);
+        atmbg.setBounds(520, 190, 380, 240);
 
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg.jpg"))); // NOI18N
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
         main_bg.setText("jLabel2");
         jPanel1.add(main_bg);
-        main_bg.setBounds(200, 0, 952, 730);
+        main_bg.setBounds(350, 0, 720, 730);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
@@ -107,6 +136,25 @@ public class service extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cash_withdrawalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cash_withdrawalActionPerformed
+           // TODO add your handling code here:
+             ammount a1=new ammount();
+             a1.setVisible(true);
+             dispose(); 
+    }//GEN-LAST:event_cash_withdrawalActionPerformed
+
+    private void balanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balanceActionPerformed
+        // TODO add your handling code here:
+        balance b1=new balance();
+        try {
+            b1.get();
+        } catch (SQLException ex) {
+            Logger.getLogger(service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         b1.setVisible(true);
+         dispose();        
+    }//GEN-LAST:event_balanceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,8 +196,11 @@ public class service extends javax.swing.JFrame {
     private javax.swing.JLabel arrowbal;
     private javax.swing.JLabel arrowcw;
     private javax.swing.JLabel atmbg;
+    private javax.swing.JButton balance;
     private javax.swing.JLabel balance_txt;
+    private javax.swing.JLabel card_slot;
     private javax.swing.JLabel cash_with_txt;
+    private javax.swing.JButton cash_withdrawal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     private javax.swing.JLabel service_txt;

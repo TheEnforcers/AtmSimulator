@@ -39,6 +39,7 @@ public class trans_cancelled extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        card_slot = new javax.swing.JLabel();
         tran2_text = new javax.swing.JLabel();
         tran1_text = new javax.swing.JLabel();
         w_bg = new javax.swing.JLabel();
@@ -48,6 +49,10 @@ public class trans_cancelled extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
+
+        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(card_slot);
+        card_slot.setBounds(900, 470, 110, 40);
 
         tran2_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tran2_text.setText("BEING CANCELLED.....");
@@ -69,17 +74,17 @@ public class trans_cancelled extends javax.swing.JFrame {
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(-10, -10, 1380, 740);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1366, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
         );
 
         pack();
@@ -122,6 +127,7 @@ public class trans_cancelled extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
+    private javax.swing.JLabel card_slot;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     private javax.swing.JLabel tran1_text;

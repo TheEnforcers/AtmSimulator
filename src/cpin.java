@@ -4,6 +4,7 @@ import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import sql1.db_bal;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,12 +21,17 @@ import java.util.logging.Logger;
 
 public class cpin extends javax.swing.JFrame {
     int i=-1;
+   static  int p=0;
+     static int h;
+    public static double  bal[]=new double[20];
      int row;
-     static String cp[]=new String[20];
-    static String out;
+    public  String cp[]=new String[20];
+    //  String cp_bal[]=new String[20];
+    public  String out;
     int j;
     char inpass[];
     char pin[]=new char[6];
+    static String name[]=new String[20];
     
     /**
      * Creates new form cpin
@@ -66,6 +72,7 @@ public class cpin extends javax.swing.JFrame {
         b_enter = new javax.swing.JButton();
         b_clear = new javax.swing.JButton();
         b_cancel = new javax.swing.JButton();
+        card_slot = new javax.swing.JLabel();
         pinpass = new javax.swing.JPasswordField();
         cpin_txt = new javax.swing.JLabel();
         atmbg = new javax.swing.JLabel();
@@ -185,6 +192,10 @@ public class cpin extends javax.swing.JFrame {
         jPanel1.add(b_cancel);
         b_cancel.setBounds(790, 700, 60, 20);
 
+        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(card_slot);
+        card_slot.setBounds(900, 470, 110, 40);
+
         pinpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pinpassActionPerformed(evt);
@@ -292,8 +303,8 @@ public class cpin extends javax.swing.JFrame {
 
     private void b_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_cancelActionPerformed
         // TODO add your handling code here:
-        lang l1=new lang();
-         l1.setVisible(true);
+        trans_cancelled t1=new trans_cancelled();
+         t1.setVisible(true);
          dispose();
     }//GEN-LAST:event_b_cancelActionPerformed
 
@@ -384,13 +395,17 @@ public class cpin extends javax.swing.JFrame {
 
     private void b_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterActionPerformed
         int a;
+        
         try {
             // TODO add your handling code here:
        
             getData();
-           
-            // System.out.println(a+ cp+ out);
-            a=compare();
+          a=compare();
+          //  System.out.println(out);
+            
+           // System.out.println(a);
+        //   System.out.println(p);
+         //   System.out.println(bal[h]);
 
             if(a==1)
             {
@@ -433,20 +448,26 @@ public class cpin extends javax.swing.JFrame {
     public int compare() throws SQLException
     {
         int r=0;
+        
        // String str =pin;
        // char ch1 = str.charAt(1);
        
        // System.out.println(cp);
-       while(r<=1)
+       while(r<=1)  // since 2 rows present in database
          {
-       System.out.println(cp[r]);
+          
+           
+       //System.out.println(cp[r]);
        if(out.equals(cp[r])==true)
         {
+            
             return 1;
             
           //  System.out.println("dhfjhfj");
         }
        r++;
+        p++;
+        h=p;
           }
        return 0;/*
        else
@@ -457,18 +478,31 @@ public class cpin extends javax.swing.JFrame {
         } */
        // System.out.println(out);
     }
+    public double[] bala()
+    {
+        return bal;
+    }
+   public String[] name()
+   {
+       return name;
+   }
+    
     public void getData() throws SQLException
     {
         
          db db1=new db();
+          cp = db1.db();
+           bal=db1.db_bal();
+           name=db1.db_name();
+                   
         
-        cp = db1.db();
+    
         
     }
-    public void getData2()
-    {
-        
-    }
+    public int disp(){
+            return h;
+    } 
+       
     
 
     /**
@@ -533,10 +567,15 @@ public class cpin extends javax.swing.JFrame {
     private javax.swing.JButton b_cancel;
     private javax.swing.JButton b_clear;
     private javax.swing.JButton b_enter;
+    private javax.swing.JLabel card_slot;
     private javax.swing.JLabel cpin_txt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     private javax.swing.JTextField pin1;
     private javax.swing.JPasswordField pinpass;
     // End of variables declaration//GEN-END:variables
+
+    public int disp_n() {
+        return p;
+    }
 }

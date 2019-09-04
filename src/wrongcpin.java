@@ -44,6 +44,7 @@ public class wrongcpin extends javax.swing.JFrame {
         arr1 = new javax.swing.JLabel();
         select_text = new javax.swing.JLabel();
         arr2 = new javax.swing.JLabel();
+        card_slot = new javax.swing.JLabel();
         exit = new javax.swing.JButton();
         renter = new javax.swing.JButton();
         wbg = new javax.swing.JLabel();
@@ -55,33 +56,39 @@ public class wrongcpin extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         enter_pin_text.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        enter_pin_text.setForeground(new java.awt.Color(255, 255, 255));
         enter_pin_text.setText("ENTER PIN AGAIN");
         jPanel1.add(enter_pin_text);
-        enter_pin_text.setBounds(770, 340, 140, 17);
+        enter_pin_text.setBounds(750, 260, 140, 17);
 
         exit_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        exit_text.setForeground(new java.awt.Color(255, 255, 255));
         exit_text.setText("EXIT");
         jPanel1.add(exit_text);
-        exit_text.setBounds(800, 380, 80, 30);
+        exit_text.setBounds(780, 300, 80, 30);
 
         wrong_pin_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         wrong_pin_text.setText("WRONG PIN ENTERED");
         jPanel1.add(wrong_pin_text);
-        wrong_pin_text.setBounds(560, 270, 280, 30);
+        wrong_pin_text.setBounds(570, 190, 280, 30);
 
         arr1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
         jPanel1.add(arr1);
-        arr1.setBounds(770, 330, 170, 40);
+        arr1.setBounds(740, 250, 170, 40);
 
         select_text.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         select_text.setText("PLEASE SELECT AN OPTION");
         jPanel1.add(select_text);
-        select_text.setBounds(610, 280, 180, 70);
+        select_text.setBounds(610, 200, 180, 70);
 
         arr2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
         arr2.setText("EXIT");
         jPanel1.add(arr2);
-        arr2.setBounds(770, 370, 160, 50);
+        arr2.setBounds(740, 290, 160, 50);
+
+        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(card_slot);
+        card_slot.setBounds(910, 470, 120, 40);
 
         exit.setText("exit");
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +97,7 @@ public class wrongcpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(exit);
-        exit.setBounds(980, 370, 80, 30);
+        exit.setBounds(920, 280, 70, 20);
 
         renter.setText("Renter");
         renter.addActionListener(new java.awt.event.ActionListener() {
@@ -99,19 +106,19 @@ public class wrongcpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(renter);
-        renter.setBounds(980, 330, 80, 30);
+        renter.setBounds(920, 250, 70, 23);
 
         wbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(wbg);
-        wbg.setBounds(435, 248, 500, 320);
+        wbg.setBounds(520, 190, 380, 240);
 
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg.jpg"))); // NOI18N
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
         jPanel1.add(main_bg);
-        main_bg.setBounds(200, 0, 952, 730);
+        main_bg.setBounds(350, 0, 720, 730);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 20, 1370, 730);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,14 +136,15 @@ public class wrongcpin extends javax.swing.JFrame {
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
-        card c1=new card();
-         c1.setVisible(true);
+       trans_cancelled t1=new trans_cancelled();
+         t1.setVisible(true);
          dispose();
     }//GEN-LAST:event_exitActionPerformed
 
     private void renterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_renterActionPerformed
         // TODO add your handling code here:
         cpin cp1=new cpin();
+        
          cp1.setVisible(true);
          dispose();
     }//GEN-LAST:event_renterActionPerformed
@@ -180,6 +188,7 @@ public class wrongcpin extends javax.swing.JFrame {
     private javax.swing.JLabel BG;
     private javax.swing.JLabel arr1;
     private javax.swing.JLabel arr2;
+    private javax.swing.JLabel card_slot;
     private javax.swing.JLabel enter_pin_text;
     private javax.swing.JButton exit;
     private javax.swing.JLabel exit_text;

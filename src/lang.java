@@ -46,7 +46,9 @@ public class lang extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        engbt = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        hindi_text = new javax.swing.JLabel();
         arrowhin = new javax.swing.JLabel();
         english_txt = new javax.swing.JLabel();
         arroweng = new javax.swing.JLabel();
@@ -54,48 +56,10 @@ public class lang extends javax.swing.JFrame {
         atmbg = new javax.swing.JLabel();
         main_bg = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
-        engbt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
-
-        jLabel6.setFont(new java.awt.Font("Adobe Devanagari", 1, 26)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText(" हिंदी");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(860, 380, 40, 50);
-
-        arrowhin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
-        jPanel1.add(arrowhin);
-        arrowhin.setBounds(840, 380, 90, 40);
-
-        english_txt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        english_txt.setForeground(new java.awt.Color(255, 255, 255));
-        english_txt.setText("ENGLISH");
-        jPanel1.add(english_txt);
-        english_txt.setBounds(840, 330, 90, 40);
-
-        arroweng.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
-        jPanel1.add(arroweng);
-        arroweng.setBounds(840, 330, 90, 40);
-
-        ctlang.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        ctlang.setText("choose the language");
-        jPanel1.add(ctlang);
-        ctlang.setBounds(500, 240, 430, 80);
-
-        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
-        jPanel1.add(atmbg);
-        atmbg.setBounds(435, 248, 500, 320);
-
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg.jpg"))); // NOI18N
-        jPanel1.add(main_bg);
-        main_bg.setBounds(200, 0, 952, 730);
-
-        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
-        jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
 
         engbt.setText("eng");
         engbt.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +68,48 @@ public class lang extends javax.swing.JFrame {
             }
         });
         jPanel1.add(engbt);
-        engbt.setBounds(993, 340, 50, 20);
+        engbt.setBounds(930, 250, 50, 20);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(900, 470, 130, 40);
+
+        hindi_text.setFont(new java.awt.Font("Adobe Devanagari", 1, 26)); // NOI18N
+        hindi_text.setForeground(new java.awt.Color(255, 255, 255));
+        hindi_text.setText(" हिंदी");
+        jPanel1.add(hindi_text);
+        hindi_text.setBounds(830, 290, 40, 40);
+
+        arrowhin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
+        jPanel1.add(arrowhin);
+        arrowhin.setBounds(810, 290, 90, 40);
+
+        english_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        english_txt.setForeground(new java.awt.Color(255, 255, 255));
+        english_txt.setText("ENGLISH");
+        jPanel1.add(english_txt);
+        english_txt.setBounds(820, 250, 70, 30);
+
+        arroweng.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
+        jPanel1.add(arroweng);
+        arroweng.setBounds(810, 250, 90, 30);
+
+        ctlang.setFont(new java.awt.Font("Tahoma", 1, 32)); // NOI18N
+        ctlang.setText("choose the language");
+        jPanel1.add(ctlang);
+        ctlang.setBounds(540, 180, 390, 70);
+
+        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
+        jPanel1.add(atmbg);
+        atmbg.setBounds(520, 190, 380, 240);
+
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
+        jPanel1.add(main_bg);
+        main_bg.setBounds(350, 0, 952, 730);
+
+        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
+        jPanel1.add(BG);
+        BG.setBounds(0, 0, 1370, 730);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -170,7 +175,8 @@ public class lang extends javax.swing.JFrame {
     private javax.swing.JLabel ctlang;
     private javax.swing.JButton engbt;
     private javax.swing.JLabel english_txt;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel hindi_text;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     // End of variables declaration//GEN-END:variables

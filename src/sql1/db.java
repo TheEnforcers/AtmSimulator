@@ -18,8 +18,15 @@ import java.sql.Statement;
 public class db{
    // String cpin; 
     int row;
-    int i=0;
-    String a[]=new String[20]; 
+     int i=0;
+     int j=0;
+     int k=0;
+     int l=0;
+    String p[]=new String[20];
+    double  bal[]=new double[20];
+    String a[]=new String[20];
+   public String name[]=new String[20];
+      //  String b[]=new String[20]; 
     
      public String[] db() throws SQLException
             {
@@ -35,14 +42,55 @@ public class db{
               }
               return a;
                    
-                   //System.out.println(rs.getRow());
-                 /*  System.out.println(rs.getString(2));
-                   System.out.println(rs.getString(3));
-                   System.out.println(rs.getString(4)); */
-                }
-               
-               
+                  
             }
+
+    
+     public  String[] db_name() throws SQLException 
+     {
+        Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
+            //  System.out.println("Connection Created !!!");
+               Statement st=con.createStatement();
+               ResultSet rs=st.executeQuery("select * from CUSTOMER");
+              
+              while(rs.next())
+              {
+                  name[k]=rs.getString(2);
+                  k++;
+              }
+              return name;
+        }
+     public String[] db_pin() throws SQLException
+            {
+               Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
+            //  System.out.println("Connection Created !!!");
+               Statement st=con.createStatement();
+               ResultSet rs=st.executeQuery("select * from CUSTOMER");
+              
+              while(rs.next())
+              {
+                  p[l]=rs.getString(3);
+                  l++;
+              }
+              return p;
+                   
+                  
+            }
+     public  double[] db_bal() throws SQLException {
+        Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
+            //  System.out.println("Connection Created !!!");
+               Statement st=con.createStatement();
+               ResultSet rs=st.executeQuery("select * from CUSTOMER");
+              
+              while(rs.next())
+              {
+                  bal[j]=rs.getDouble(4);
+                  j++;
+              }
+              return bal;
+    }
+}
+
         
     
    

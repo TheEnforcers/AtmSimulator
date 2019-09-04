@@ -1,5 +1,10 @@
 
+//import static balance.p;
 import java.awt.Toolkit;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import sql1.db;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,12 +18,14 @@ import java.awt.Toolkit;
  */
 public class tpin extends javax.swing.JFrame {
      int i=-1;
+      int p;
      int row;
      static String cp[]=new String[20];
-    static String out;
+     String out;
     int j;
     char inpass[];
     char pin[]=new char[4];
+      String name[]=new String[20];
 
 
     /**
@@ -57,7 +64,10 @@ public class tpin extends javax.swing.JFrame {
         b4 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
         b1 = new javax.swing.JButton();
+        disp_name = new javax.swing.JTextField();
+        hello_text = new javax.swing.JLabel();
         b3 = new javax.swing.JButton();
+        card_sl = new javax.swing.JLabel();
         pin2 = new javax.swing.JTextField();
         passfield = new javax.swing.JPasswordField();
         pin_text = new javax.swing.JLabel();
@@ -167,6 +177,13 @@ public class tpin extends javax.swing.JFrame {
         });
         jPanel1.add(b1);
         b1.setBounds(570, 600, 60, 30);
+        jPanel1.add(disp_name);
+        disp_name.setBounds(710, 220, 100, 30);
+
+        hello_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        hello_text.setText("HELLO ");
+        jPanel1.add(hello_text);
+        hello_text.setBounds(590, 220, 100, 29);
 
         b3.setText("3");
         b3.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +193,10 @@ public class tpin extends javax.swing.JFrame {
         });
         jPanel1.add(b3);
         b3.setBounds(720, 600, 60, 30);
+
+        card_sl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(card_sl);
+        card_sl.setBounds(920, 470, 120, 40);
         jPanel1.add(pin2);
         pin2.setBounds(640, 380, 130, 40);
         jPanel1.add(passfield);
@@ -184,7 +205,7 @@ public class tpin extends javax.swing.JFrame {
         pin_text.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         pin_text.setText("ENTER YOUR PIN");
         jPanel1.add(pin_text);
-        pin_text.setBounds(550, 220, 330, 70);
+        pin_text.setBounds(540, 260, 330, 50);
 
         atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atm_bg);
@@ -357,10 +378,76 @@ public class tpin extends javax.swing.JFrame {
 
     private void b_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_b_enterActionPerformed
+       
+        int a;
+        
+        try {
+            // TODO add your handling code here:
+       
+            get();
+          a=compare();
+          //  System.out.println(out);
+            
+           // System.out.println(a);
+        //   System.out.println(p);
+         //   System.out.println(bal[h]);
 
+            if(a==1)
+            {
+            trans_processed t1=new trans_processed();
+            t1.setVisible(true);
+            dispose();
+            }
+            else
+            {
+                wrongtpin tp1=new wrongtpin();
+                 tp1.setVisible(true);
+                 dispose();
+
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(cpin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+    }//GEN-LAST:event_b_enterActionPerformed
+public int compare() throws SQLException
+    {
+        int r=0;
+        
+       
+       while(r<=1)  // since 2 rows present in database
+      {
+          
+        System.out.println(cp[r]);
+        System.out.println(out);
+        
+       if(out.equals(cp[r])==true)
+        {
+            
+            return 1;
+            
+          //  System.out.println("dhfjhfj");
+        }
+      
+       r++;
+     }
+       return 0;
+    }
+      // return 0;
+       /*
+       else
+        {
+             System.out.println("dhfjhfj");
+              System.out.println(pin.equals(cp));
+              System.out.println();
+        } */
+       // System.out.println(out);
+    
     private void bCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelActionPerformed
         // TODO add your handling code here:
+        trans_cancelled t1=new trans_cancelled();
+         t1.setVisible(true);
+         dispose();
     }//GEN-LAST:event_bCancelActionPerformed
      public void display()
     {
@@ -373,6 +460,19 @@ public class tpin extends javax.swing.JFrame {
           out=new String(pin);
         
      pin2.setText(out);   
+    }
+     public  void get() throws SQLException
+    {
+        db db1=new db();
+        name = db1.db_name();
+        cpin c1 = new cpin();
+        p =c1.disp_n();
+        //  System.out.println(p);
+          
+       // String out1 = name[p];
+       // System.out.println(out1); */
+        disp_name.setText(name[p]); 
+    
     }
     /**
          * @param args the command line arguments
@@ -424,6 +524,9 @@ public class tpin extends javax.swing.JFrame {
     private javax.swing.JButton bCancel;
     private javax.swing.JButton b_clear;
     private javax.swing.JButton b_enter;
+    private javax.swing.JLabel card_sl;
+    private javax.swing.JTextField disp_name;
+    private javax.swing.JLabel hello_text;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     private javax.swing.JPasswordField passfield;

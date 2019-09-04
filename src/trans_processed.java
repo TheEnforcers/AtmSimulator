@@ -39,6 +39,7 @@ public class trans_processed extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        card_slot = new javax.swing.JLabel();
         trans1_text = new javax.swing.JLabel();
         trans_text = new javax.swing.JLabel();
         w_bg = new javax.swing.JLabel();
@@ -48,6 +49,10 @@ public class trans_processed extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
+
+        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
+        jPanel1.add(card_slot);
+        card_slot.setBounds(900, 470, 110, 50);
 
         trans1_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         trans1_text.setText("BEING PROCESSED.....");
@@ -122,6 +127,7 @@ public class trans_processed extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
+    private javax.swing.JLabel card_slot;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     private javax.swing.JLabel trans1_text;

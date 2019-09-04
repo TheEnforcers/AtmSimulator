@@ -2,6 +2,8 @@
 //import static cpin.out;
 //import static cpin.out;
 import java.awt.Toolkit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -164,6 +166,11 @@ public class ammount extends javax.swing.JFrame {
         clear.setBounds(790, 650, 60, 23);
 
         cancel.setText("cancel");
+        cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelActionPerformed(evt);
+            }
+        });
         jPanel2.add(cancel);
         cancel.setBounds(790, 693, 60, 30);
 
@@ -361,9 +368,21 @@ public class ammount extends javax.swing.JFrame {
 
     private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
     tpin t1=new tpin();
-    t1.setVisible(true);
-    dispose();        // TODO add your handling code here:
+        try {
+            t1.get();
+        } catch (java.sql.SQLException ex) {
+            Logger.getLogger(service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         t1.setVisible(true);
+         dispose();          // TODO add your handling code here:
     }//GEN-LAST:event_enterActionPerformed
+
+    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
+        // TODO add your handling code here:
+        trans_cancelled t1=new trans_cancelled();
+         t1.setVisible(true);
+         dispose();
+    }//GEN-LAST:event_cancelActionPerformed
 
     /**
      * @param args the command line arguments
