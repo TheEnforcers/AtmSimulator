@@ -2,6 +2,7 @@
 //import static cpin.out;
 //import static cpin.out;
 import java.awt.Toolkit;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +24,7 @@ public class ammount extends javax.swing.JFrame {
     int j;
     char inpass[];
     char pin[]=new char[10];
+  public  static double am1;
 
     /**
      * Creates new form ammount
@@ -365,18 +367,29 @@ public class ammount extends javax.swing.JFrame {
         ammount.setText(string);
         displayc();        // TODO add your handling code here:
     }//GEN-LAST:event_clearActionPerformed
-
+public void amnt()
+{
+        am1=Double.parseDouble(ammount.getText());
+    
+}
+        
     private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
     tpin t1=new tpin();
+    amnt();
+        
         try {
             t1.get();
-        } catch (java.sql.SQLException ex) {
-            Logger.getLogger(service.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ammount.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
          t1.setVisible(true);
          dispose();          // TODO add your handling code here:
     }//GEN-LAST:event_enterActionPerformed
-
+public double getAm()
+{
+    return am1;
+}
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
         // TODO add your handling code here:
         trans_cancelled t1=new trans_cancelled();

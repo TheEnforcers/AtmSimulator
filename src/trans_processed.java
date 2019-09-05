@@ -1,5 +1,10 @@
 
 import java.awt.Toolkit;
+import java.sql.SQLException;
+import java.util.Timer;
+import java.util.TimerTask;
+import sql1.db;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,6 +17,9 @@ import java.awt.Toolkit;
  * @author My
  */
 public class trans_processed extends javax.swing.JFrame {
+      static double  am[]=new double[20];
+      static int p;
+      static double am1;
 
     /**
      * Creates new form trans_processed
@@ -27,7 +35,47 @@ public class trans_processed extends javax.swing.JFrame {
         this.setSize((int)width, (int)height);
 
         initComponents();
+        
+        
+        
+        
+         Timer time=new Timer();
+         time.schedule(new TimerTask(){
+             
+             @Override
+             public void run()
+                 {
+                      money m1 =new money();
+                         m1.setVisible(true);
+                        dispose();
+                 }
+         } , 2500);
     }
+   public   void get() throws java.sql.SQLException
+    {
+        db db1=new db();
+        cpin c1=new cpin();
+        p=c1.disp();
+        am=db1.db_bal();
+        
+        withdraw();
+        
+      //  System.out.println(am[p]);
+      
+    }
+ public void withdraw() throws SQLException
+ {
+     ammount a1 = new ammount();
+     am1=a1.getAm();
+     am[p]=am[p]-am1;
+     System.out.println(am[p]);
+     db db1=new db();
+     db1.db_balPut();
+ }
+ public   double[] amtUpdate()
+ {
+    return am;
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -93,7 +141,8 @@ public class trans_processed extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws SQLException {
+       // get();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

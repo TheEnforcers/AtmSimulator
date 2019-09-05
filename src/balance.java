@@ -107,8 +107,10 @@ public class balance extends javax.swing.JFrame {
         });
         jPanel1.add(exit);
         exit.setBounds(920, 280, 73, 23);
+
+        disp_name.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jPanel1.add(disp_name);
-        disp_name.setBounds(710, 220, 80, 30);
+        disp_name.setBounds(700, 210, 90, 50);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("HELLO");

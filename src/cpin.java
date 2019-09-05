@@ -575,7 +575,5 @@ public class cpin extends javax.swing.JFrame {
     private javax.swing.JPasswordField pinpass;
     // End of variables declaration//GEN-END:variables
 
-    public int disp_n() {
-        return p;
-    }
+    
 }

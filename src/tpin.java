@@ -18,14 +18,14 @@ import sql1.db;
  */
 public class tpin extends javax.swing.JFrame {
      int i=-1;
-      int p;
+     static int p;
      int row;
-     static String cp[]=new String[20];
+     static String tp[]=new String[20];
      String out;
     int j;
     char inpass[];
     char pin[]=new char[4];
-      String name[]=new String[20];
+     static String name[]=new String[20];
 
 
     /**
@@ -68,10 +68,10 @@ public class tpin extends javax.swing.JFrame {
         hello_text = new javax.swing.JLabel();
         b3 = new javax.swing.JButton();
         card_sl = new javax.swing.JLabel();
-        pin2 = new javax.swing.JTextField();
         passfield = new javax.swing.JPasswordField();
         pin_text = new javax.swing.JLabel();
         atm_bg = new javax.swing.JLabel();
+        pin2 = new javax.swing.JTextField();
         main_bg = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
@@ -177,8 +177,15 @@ public class tpin extends javax.swing.JFrame {
         });
         jPanel1.add(b1);
         b1.setBounds(570, 600, 60, 30);
+
+        disp_name.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        disp_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disp_nameActionPerformed(evt);
+            }
+        });
         jPanel1.add(disp_name);
-        disp_name.setBounds(710, 220, 100, 30);
+        disp_name.setBounds(700, 210, 110, 40);
 
         hello_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         hello_text.setText("HELLO ");
@@ -197,8 +204,6 @@ public class tpin extends javax.swing.JFrame {
         card_sl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
         jPanel1.add(card_sl);
         card_sl.setBounds(920, 470, 120, 40);
-        jPanel1.add(pin2);
-        pin2.setBounds(640, 380, 130, 40);
         jPanel1.add(passfield);
         passfield.setBounds(620, 320, 180, 50);
 
@@ -210,6 +215,8 @@ public class tpin extends javax.swing.JFrame {
         atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atm_bg);
         atm_bg.setBounds(520, 190, 380, 240);
+        jPanel1.add(pin2);
+        pin2.setBounds(640, 380, 130, 40);
 
         main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
         jPanel1.add(main_bg);
@@ -386,17 +393,15 @@ public class tpin extends javax.swing.JFrame {
        
             get();
           a=compare();
-          //  System.out.println(out);
-            
-           // System.out.println(a);
-        //   System.out.println(p);
-         //   System.out.println(bal[h]);
+          
 
             if(a==1)
             {
             trans_processed t1=new trans_processed();
+            t1.get();
             t1.setVisible(true);
             dispose();
+            
             }
             else
             {
@@ -418,10 +423,10 @@ public int compare() throws SQLException
        while(r<=1)  // since 2 rows present in database
       {
           
-        System.out.println(cp[r]);
-        System.out.println(out);
+       // System.out.println(tp[r]);
+       // System.out.println(out);
         
-       if(out.equals(cp[r])==true)
+       if(out.equals(tp[r])==true)
         {
             
             return 1;
@@ -449,6 +454,10 @@ public int compare() throws SQLException
          t1.setVisible(true);
          dispose();
     }//GEN-LAST:event_bCancelActionPerformed
+
+    private void disp_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disp_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_disp_nameActionPerformed
      public void display()
     {
            out=new String(pin);
@@ -465,12 +474,8 @@ public int compare() throws SQLException
     {
         db db1=new db();
         name = db1.db_name();
-        cpin c1 = new cpin();
-        p =c1.disp_n();
-        //  System.out.println(p);
-          
-       // String out1 = name[p];
-       // System.out.println(out1); */
+        tp = db1.db_pin();
+       
         disp_name.setText(name[p]); 
     
     }

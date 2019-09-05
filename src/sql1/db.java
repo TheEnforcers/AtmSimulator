@@ -10,6 +10,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.derby.iapi.sql.PreparedStatement;
 
 /**
  *
@@ -18,12 +21,16 @@ import java.sql.Statement;
 public class db{
    // String cpin; 
     int row;
+      static  int p;
+     static double  am[]=new double[20];
+     static String tp[]=new String[20];
      int i=0;
      int j=0;
      int k=0;
      int l=0;
-    String p[]=new String[20];
+    String pn[]=new String[20];
     double  bal[]=new double[20];
+     double  balUpdate[]=new double[20];
     String a[]=new String[20];
    public String name[]=new String[20];
       //  String b[]=new String[20]; 
@@ -64,15 +71,15 @@ public class db{
             {
                Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
             //  System.out.println("Connection Created !!!");
-               Statement st=con.createStatement();
+              Statement st=con.createStatement();
                ResultSet rs=st.executeQuery("select * from CUSTOMER");
               
               while(rs.next())
               {
-                  p[l]=rs.getString(3);
+                  pn[l]=rs.getString(3);
                   l++;
               }
-              return p;
+              return pn;
                    
                   
             }
@@ -89,6 +96,30 @@ public class db{
               }
               return bal;
     }
+     public  double[] db_balPut() throws SQLException {
+       // Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
+        try {
+            //  System.out.println("Connection Created !!!");
+            //     Statement st=con.createStatement();
+               
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            
+             Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
+         //   ResultSet rs=st.executeQuery("select * from CUSTOMER");
+        //    Statement st=con.createStatement();
+        //     ResultSet rs=st.executeQuery("select * from CUSTOMER");
+             java.sql.PreparedStatement ps= con.prepareStatement("update CUSTOMER set BALANCE =? where TPIN=? ");
+             System.out.println(am[p]);
+             System.out.println(tp[p]);
+            ps.setDouble(1, am[p]);
+             ps.setString(2,tp[p]);
+            ps.executeUpdate();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(db.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+              return bal;
+      }
 }
 
         

@@ -1,8 +1,6 @@
 
 import java.awt.Toolkit;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import java.util.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,13 +11,13 @@ import java.util.TimerTask;
  *
  * @author My
  */
-public class trans_cancelled extends javax.swing.JFrame {
+public class money extends javax.swing.JFrame {
 
     /**
-     * Creates new form trans_cancelled
+     * Creates new form money
      */
-    public trans_cancelled() {
-          this.setUndecorated(true);
+    public money() {
+           this.setUndecorated(true);
         
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         double width = toolkit.getScreenSize().getWidth();
@@ -27,10 +25,7 @@ public class trans_cancelled extends javax.swing.JFrame {
         double height = toolkit.getScreenSize().getHeight();
         
         this.setSize((int)width, (int)height);
-
         initComponents();
-        
-        
          Timer time=new Timer();
          time.schedule(new TimerTask(){
              
@@ -41,7 +36,7 @@ public class trans_cancelled extends javax.swing.JFrame {
                          c1.setVisible(true);
                         dispose();
                  }
-         } , 2500);
+         } , 3000);
     }
 
     /**
@@ -54,52 +49,47 @@ public class trans_cancelled extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        card_slot = new javax.swing.JLabel();
-        tran2_text = new javax.swing.JLabel();
-        tran1_text = new javax.swing.JLabel();
-        w_bg = new javax.swing.JLabel();
-        main_bg = new javax.swing.JLabel();
-        BG = new javax.swing.JLabel();
+        THANK_text = new javax.swing.JLabel();
+        you = new javax.swing.JLabel();
+        atm_bg = new javax.swing.JLabel();
+        gif = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(card_slot);
-        card_slot.setBounds(900, 470, 110, 40);
+        THANK_text.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        THANK_text.setText("THANK ");
+        jPanel1.add(THANK_text);
+        THANK_text.setBounds(610, 240, 230, 40);
 
-        tran2_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        tran2_text.setText("BEING CANCELLED.....");
-        jPanel1.add(tran2_text);
-        tran2_text.setBounds(580, 310, 280, 60);
+        you.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        you.setText("YOU !!!");
+        jPanel1.add(you);
+        you.setBounds(620, 310, 166, 58);
 
-        tran1_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        tran1_text.setText("YOUR TRANSACTION IS");
-        jPanel1.add(tran1_text);
-        tran1_text.setBounds(570, 220, 310, 70);
+        atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
+        jPanel1.add(atm_bg);
+        atm_bg.setBounds(510, 190, 380, 240);
 
-        w_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
-        jPanel1.add(w_bg);
-        w_bg.setBounds(520, 190, 380, 240);
+        gif.setIcon(new javax.swing.ImageIcon("C:\\Users\\My\\Downloads\\money1.gif")); // NOI18N
+        jPanel1.add(gif);
+        gif.setBounds(350, 0, 700, 730);
 
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
-        jPanel1.add(main_bg);
-        main_bg.setBounds(350, 0, 700, 730);
-
-        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
-        jPanel1.add(BG);
-        BG.setBounds(-10, -10, 1380, 740);
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
+        jPanel1.add(bg);
+        bg.setBounds(0, 0, 1370, 730);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1366, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         pack();
@@ -122,31 +112,30 @@ public class trans_cancelled extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(trans_cancelled.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(money.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(trans_cancelled.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(money.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(trans_cancelled.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(money.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(trans_cancelled.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(money.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new trans_cancelled().setVisible(true);
+                new money().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BG;
-    private javax.swing.JLabel card_slot;
+    private javax.swing.JLabel THANK_text;
+    private javax.swing.JLabel atm_bg;
+    private javax.swing.JLabel bg;
+    private javax.swing.JLabel gif;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel main_bg;
-    private javax.swing.JLabel tran1_text;
-    private javax.swing.JLabel tran2_text;
-    private javax.swing.JLabel w_bg;
+    private javax.swing.JLabel you;
     // End of variables declaration//GEN-END:variables
 }
