@@ -73,7 +73,7 @@ public class money extends javax.swing.JFrame {
         jPanel1.add(atm_bg);
         atm_bg.setBounds(510, 190, 380, 240);
 
-        gif.setIcon(new javax.swing.ImageIcon("C:\\Users\\My\\Downloads\\money1.gif")); // NOI18N
+        gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/money1.gif"))); // NOI18N
         jPanel1.add(gif);
         gif.setBounds(350, 0, 700, 730);
 

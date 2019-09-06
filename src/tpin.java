@@ -18,7 +18,7 @@ import sql1.db;
  */
 public class tpin extends javax.swing.JFrame {
      int i=-1;
-     static int p;
+      int p;
      int row;
      static String tp[]=new String[20];
      String out;
@@ -420,7 +420,7 @@ public int compare() throws SQLException
         int r=0;
         
        
-       while(r<=1)  // since 2 rows present in database
+       while(r<=4)  // since 2 rows present in database
       {
           
        // System.out.println(tp[r]);
@@ -472,6 +472,8 @@ public int compare() throws SQLException
     }
      public  void get() throws SQLException
     {
+        cpin c1=new cpin();
+        p=c1.disp();
         db db1=new db();
         name = db1.db_name();
         tp = db1.db_pin();

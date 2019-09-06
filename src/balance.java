@@ -21,7 +21,7 @@ public class balance extends javax.swing.JFrame {
    public String cp[]=new String[20];
   // public String cp_bal[]=new String[20];
     //  String out; 
-    static   int p;
+       int p;
      static double bal[]=new double[10];
      String name[]=new String[20];
     
@@ -53,8 +53,9 @@ public class balance extends javax.swing.JFrame {
     {
         cpin c1 = new cpin();
         p=c1.disp();
-        bal=c1.bala();
+       
         db db1=new db();
+         bal=db1.db_bal();
          name = db1.db_name();
        //  System.out.println(p);
        //  System.out.println(bal[p]);

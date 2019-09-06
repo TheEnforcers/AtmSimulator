@@ -23,7 +23,7 @@ public class ammount extends javax.swing.JFrame {
     static String out;
     int j;
     char inpass[];
-    char pin[]=new char[10];
+    char pin[]=new char[6];
   public  static double am1;
 
     /**

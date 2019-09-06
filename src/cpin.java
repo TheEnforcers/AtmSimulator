@@ -21,7 +21,7 @@ import sql1.db_bal;
 
 public class cpin extends javax.swing.JFrame {
     int i=-1;
-   static  int p=0;
+     int p=0;
      static int h;
     public static double  bal[]=new double[20];
      int row;
@@ -453,7 +453,7 @@ public class cpin extends javax.swing.JFrame {
        // char ch1 = str.charAt(1);
        
        // System.out.println(cp);
-       while(r<=1)  // since 2 rows present in database
+       while(r<=4)  // since 2 rows present in database
          {
           
            

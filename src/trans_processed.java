@@ -18,7 +18,8 @@ import sql1.db;
  */
 public class trans_processed extends javax.swing.JFrame {
       static double  am[]=new double[20];
-      static int p;
+       static String tp[]=new String[20];
+       int p;
       static double am1;
 
     /**
@@ -57,7 +58,7 @@ public class trans_processed extends javax.swing.JFrame {
         cpin c1=new cpin();
         p=c1.disp();
         am=db1.db_bal();
-        
+        tp=db1.db_pin();
         withdraw();
         
       //  System.out.println(am[p]);
@@ -70,7 +71,7 @@ public class trans_processed extends javax.swing.JFrame {
      am[p]=am[p]-am1;
      System.out.println(am[p]);
      db db1=new db();
-     db1.db_balPut();
+     db1.db_balPut(am[p],tp[p]);
  }
  public   double[] amtUpdate()
  {

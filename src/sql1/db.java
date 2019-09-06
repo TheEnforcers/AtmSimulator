@@ -5,6 +5,7 @@
  */
 package sql1;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -13,17 +14,20 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.derby.iapi.sql.PreparedStatement;
+//import trans_processed;
+//import default package.class trans_processed.amtUpdate;
 
 /**
  *
  * @author My
  */
+
 public class db{
    // String cpin; 
     int row;
       static  int p;
-     static double  am[]=new double[20];
-     static String tp[]=new String[20];
+   //  static double  amu[]=new double[20];
+   //  static String tp[]=new String[20];
      int i=0;
      int j=0;
      int k=0;
@@ -96,7 +100,7 @@ public class db{
               }
               return bal;
     }
-     public  double[] db_balPut() throws SQLException {
+     public  double[] db_balPut(double amu,String tp) throws SQLException {
        // Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
         try {
             //  System.out.println("Connection Created !!!");
@@ -109,10 +113,14 @@ public class db{
         //    Statement st=con.createStatement();
         //     ResultSet rs=st.executeQuery("select * from CUSTOMER");
              java.sql.PreparedStatement ps= con.prepareStatement("update CUSTOMER set BALANCE =? where TPIN=? ");
-             System.out.println(am[p]);
-             System.out.println(tp[p]);
-            ps.setDouble(1, am[p]);
-             ps.setString(2,tp[p]);
+            
+             
+             
+ 
+             System.out.println(amu);
+             System.out.println(tp);
+            ps.setDouble(1, amu);
+             ps.setString(2,tp);
             ps.executeUpdate();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(db.class.getName()).log(Level.SEVERE, null, ex);
