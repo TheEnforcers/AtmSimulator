@@ -39,7 +39,6 @@ public class card extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        cardslot = new javax.swing.JLabel();
         card = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         Pls_insert = new javax.swing.JLabel();
@@ -54,13 +53,9 @@ public class card extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1370, 670));
         jPanel1.setLayout(null);
 
-        cardslot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(cardslot);
-        cardslot.setBounds(910, 470, 100, 40);
-
         card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tide1.jpg"))); // NOI18N
         jPanel1.add(card);
-        card.setBounds(920, 580, 74, 120);
+        card.setBounds(960, 580, 74, 120);
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,29 +63,29 @@ public class card extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(930, 590, 60, 100);
+        jButton1.setBounds(970, 590, 60, 100);
 
         Pls_insert.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Pls_insert.setText("please insert the card");
         jPanel1.add(Pls_insert);
-        Pls_insert.setBounds(580, 310, 260, 40);
+        Pls_insert.setBounds(600, 240, 260, 40);
 
         Welcome.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         Welcome.setText("Welcome");
         jPanel1.add(Welcome);
-        Welcome.setBounds(600, 220, 240, 40);
+        Welcome.setBounds(620, 190, 240, 40);
 
         atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atm_bg);
-        atm_bg.setBounds(520, 190, 380, 240);
+        atm_bg.setBounds(540, 185, 380, 240);
 
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
         jPanel1.add(main_bg);
-        main_bg.setBounds(350, 0, 700, 730);
+        main_bg.setBounds(370, 0, 720, 780);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,8 +96,8 @@ public class card extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -157,7 +152,6 @@ public class card extends javax.swing.JFrame {
     private javax.swing.JLabel Welcome;
     private javax.swing.JLabel atm_bg;
     private javax.swing.JLabel card;
-    private javax.swing.JLabel cardslot;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;

@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import sql1.db;
-import sql1.db_bal; 
 
 
 /*
@@ -109,7 +108,18 @@ public class balance extends javax.swing.JFrame {
         jPanel1.add(exit);
         exit.setBounds(920, 280, 73, 23);
 
+        disp_name.setEditable(false);
+        disp_name.setBackground(new java.awt.Color(255, 255, 255));
         disp_name.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        disp_name.setBorder(null);
+        disp_name.setHighlighter(null);
+        disp_name.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        disp_name.setOpaque(false);
+        disp_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disp_nameActionPerformed(evt);
+            }
+        });
         jPanel1.add(disp_name);
         disp_name.setBounds(700, 210, 90, 50);
 
@@ -176,6 +186,10 @@ public class balance extends javax.swing.JFrame {
         c1.setVisible(true);
         dispose();
     }//GEN-LAST:event_exitActionPerformed
+
+    private void disp_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disp_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_disp_nameActionPerformed
 
     /**
      * @param args the command line arguments
