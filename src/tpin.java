@@ -19,7 +19,6 @@ import sql1.db;
 public class tpin extends javax.swing.JFrame {
      int i=-1;
       int p;
-     int row;
      static String tp[]=new String[20];
      String out;
     int j;
@@ -417,25 +416,15 @@ public class tpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b_enterActionPerformed
 public int compare() throws SQLException
     {
-        int r=0;
         
-       
-       while(r<=4)  // since 2 rows present in database
-      {
-          
-       // System.out.println(tp[r]);
-       // System.out.println(out);
         
-       if(out.equals(tp[r])==true)
+       if(out.equals(tp[p])==true)
         {
             
             return 1;
             
           //  System.out.println("dhfjhfj");
         }
-      
-       r++;
-     }
        return 0;
     }
       // return 0;

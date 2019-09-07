@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 public class cpin extends javax.swing.JFrame {
     int i=-1;
      int p=0;
+     int m;
      static int h;
     public static double  bal[]=new double[20];
      int row;
@@ -452,7 +453,7 @@ public class cpin extends javax.swing.JFrame {
        // char ch1 = str.charAt(1);
        
        // System.out.println(cp);
-       while(r<=4)  // since 2 rows present in database
+       while(r<=m)  // since 2 rows present in database
          {
           
            
@@ -493,6 +494,7 @@ public class cpin extends javax.swing.JFrame {
           cp = db1.db();
            bal=db1.db_bal();
            name=db1.db_name();
+           m=db1.row();
                    
         
     

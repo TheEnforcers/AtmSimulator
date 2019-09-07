@@ -32,6 +32,7 @@ public class db{
      int j=0;
      int k=0;
      int l=0;
+     int m=0;
     String pn[]=new String[20];
     double  bal[]=new double[20];
      double  balUpdate[]=new double[20];
@@ -128,8 +129,20 @@ public class db{
             
               return bal;
       }
-}
 
+     public  int row() throws SQLException {
+        Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/customer", "root", "root");
+            //  System.out.println("Connection Created !!!");
+               Statement st=con.createStatement();
+               ResultSet rs=st.executeQuery("select * from CUSTOMER");
+              
+              while(rs.next())
+              {
+                  m++;
+              }
+              return m;
+    }
+}
         
     
    
