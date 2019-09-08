@@ -4,7 +4,11 @@ import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+import java.io.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,6 +23,8 @@ import java.util.logging.Logger;
     
 
 public class cpin extends javax.swing.JFrame {
+    File wavFile = new File("src\\beep.wav");
+    AudioClip sound;
     int i=-1;
      int p=0;
      int m;
@@ -256,6 +262,9 @@ public class cpin extends javax.swing.JFrame {
        // StringBuilder sb=new StringBuilder();
     //   if(i<7)
      //  {
+     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -280,6 +289,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         // TODO add your handling code here:
+             try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -294,6 +306,9 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -308,6 +323,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_cancelActionPerformed
         // TODO add your handling code here:
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         trans_cancelled t1=new trans_cancelled();
          t1.setVisible(true);
          dispose();
@@ -319,6 +337,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         // TODO add your handling code here:
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -333,6 +354,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         // TODO add your handling code here:
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -347,6 +371,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         // TODO add your handling code here:
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -360,6 +387,9 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -373,6 +403,9 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -386,6 +419,9 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i++;
         j=i+1;
         if(j<7)
@@ -399,6 +435,9 @@ public class cpin extends javax.swing.JFrame {
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b_enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterActionPerformed
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         int a;
         
         try {
@@ -433,6 +472,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_clearActionPerformed
         // TODO add your handling code here:
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         i--;
         j=i+1;
         if(j<7)
@@ -447,6 +489,9 @@ public class cpin extends javax.swing.JFrame {
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
         // TODO add your handling code here:
+                     try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
          i++;
         j=i+1;
         if(j<7)
