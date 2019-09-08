@@ -1,9 +1,13 @@
 
+
 import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import sql1.db;
+//import java.io.*;
+import java.applet.*;
+import java.io.*;
 
 
 /*
@@ -17,6 +21,9 @@ import sql1.db;
  * @author My
  */
 public class balance extends javax.swing.JFrame {
+     File wavFile = new File("src\\beep-3.wav");
+    AudioClip sound;
+
    public String cp[]=new String[20];
   // public String cp_bal[]=new String[20];
     //  String out; 
@@ -189,6 +196,10 @@ public class balance extends javax.swing.JFrame {
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
         //  get();
+        try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
+
         card c1=new card();
         c1.setVisible(true);
         dispose();

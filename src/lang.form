@@ -98,13 +98,13 @@
         <Component class="javax.swing.JLabel" name="ctlang">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="32" style="1"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="choose the language"/>
+            <Property name="text" type="java.lang.String" value="CHOOSE THE LANGUAGE"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="540" y="180" width="390" height="70"/>
+              <AbsoluteConstraints x="580" y="180" width="380" height="70"/>
             </Constraint>
           </Constraints>
         </Component>

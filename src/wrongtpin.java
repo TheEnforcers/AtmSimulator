@@ -3,6 +3,8 @@ import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.applet.*;
+import java.io.File;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,6 +17,9 @@ import java.util.logging.Logger;
  * @author My
  */
 public class wrongtpin extends javax.swing.JFrame {
+     File wavFile = new File("src\\beep-3.wav");
+    AudioClip sound;
+
 
     /**
      * Creates new form wrongtpin
@@ -136,6 +141,9 @@ public class wrongtpin extends javax.swing.JFrame {
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
+          try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         trans_cancelled t1=new trans_cancelled();
          t1.setVisible(true);
          dispose();
@@ -143,6 +151,9 @@ public class wrongtpin extends javax.swing.JFrame {
 
     private void renterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_renterActionPerformed
         // TODO add your handling code here:
+          try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         tpin t1=new tpin();
         try {
             t1.get();

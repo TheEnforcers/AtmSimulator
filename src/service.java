@@ -4,6 +4,8 @@ import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.applet.*;
+import java.io.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,6 +18,9 @@ import java.util.logging.Logger;
  * @author sarve
  */
 public class service extends javax.swing.JFrame {
+        File wavFile = new File("src\\beep-3.wav");
+    AudioClip sound;
+
 
     /**
      * Creates new form service
@@ -130,6 +135,10 @@ public class service extends javax.swing.JFrame {
 
     private void cash_withdrawalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cash_withdrawalActionPerformed
            // TODO add your handling code here:
+           try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
+
              ammount a1=new ammount();
              a1.setVisible(true);
              dispose(); 
@@ -137,6 +146,10 @@ public class service extends javax.swing.JFrame {
 
     private void balanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balanceActionPerformed
         // TODO add your handling code here:
+        try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
+
         balance b1=new balance();
         try {
             b1.get();

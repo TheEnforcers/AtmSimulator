@@ -23,7 +23,7 @@ import java.io.*;
     
 
 public class cpin extends javax.swing.JFrame {
-    File wavFile = new File("src\\beep.wav");
+    File wavFile = new File("src\\beep-3.wav");
     AudioClip sound;
     int i=-1;
      int p=0;
@@ -95,6 +95,7 @@ public class cpin extends javax.swing.JFrame {
         jPanel1.add(cpin_txt);
         cpin_txt.setBounds(590, 210, 300, 60);
 
+        pinpass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pinpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pinpassActionPerformed(evt);
@@ -238,7 +239,7 @@ public class cpin extends javax.swing.JFrame {
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 780);
+        BG.setBounds(-10, 0, 1380, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

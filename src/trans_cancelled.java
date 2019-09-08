@@ -67,12 +67,12 @@ public class trans_cancelled extends javax.swing.JFrame {
         tran2_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tran2_text.setText("BEING CANCELLED.....");
         jPanel1.add(tran2_text);
-        tran2_text.setBounds(580, 310, 280, 60);
+        tran2_text.setBounds(600, 310, 280, 60);
 
         tran1_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tran1_text.setText("YOUR TRANSACTION IS");
         jPanel1.add(tran1_text);
-        tran1_text.setBounds(570, 220, 310, 70);
+        tran1_text.setBounds(580, 220, 310, 70);
 
         w_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(w_bg);

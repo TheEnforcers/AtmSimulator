@@ -1,5 +1,7 @@
 
 import java.awt.Toolkit;
+import java.applet.*;
+import java.io.File;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,6 +14,10 @@ import java.awt.Toolkit;
  * @author My
  */
 public class wrongcpin extends javax.swing.JFrame {
+     File wavFile = new File("src\\beep-3.wav");
+    AudioClip sound;
+
+    
 
     /**
      * Creates new form wrongcpin
@@ -131,6 +137,9 @@ public class wrongcpin extends javax.swing.JFrame {
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
+        try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
        trans_cancelled t1=new trans_cancelled();
          t1.setVisible(true);
          dispose();
@@ -138,6 +147,9 @@ public class wrongcpin extends javax.swing.JFrame {
 
     private void renterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_renterActionPerformed
         // TODO add your handling code here:
+        try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
         cpin cp1=new cpin();
         
          cp1.setVisible(true);

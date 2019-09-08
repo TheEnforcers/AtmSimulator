@@ -57,6 +57,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JPasswordField" name="pinpass">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pinpassActionPerformed"/>
           </Events>
@@ -277,7 +282,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="1370" height="780"/>
+              <AbsoluteConstraints x="-10" y="0" width="1380" height="780"/>
             </Constraint>
           </Constraints>
         </Component>

@@ -1,6 +1,8 @@
 
 import java.awt.Toolkit;
 import java.util.*;
+import java.applet.*;
+import java.io.File;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,6 +14,9 @@ import java.util.*;
  * @author My
  */
 public class money extends javax.swing.JFrame {
+     File wavFile = new File("src\\CashOut.wav");
+    AudioClip sound;
+
 
     /**
      * Creates new form money
@@ -26,6 +31,10 @@ public class money extends javax.swing.JFrame {
         
         this.setSize((int)width, (int)height);
         initComponents();
+          try{sound = Applet.newAudioClip(wavFile.toURL());}
+          catch(Exception e){e.printStackTrace();}
+          sound.play();
+
          Timer time=new Timer();
          time.schedule(new TimerTask(){
              
@@ -37,6 +46,8 @@ public class money extends javax.swing.JFrame {
                         dispose();
                  }
          } , 3000);
+        // sound.stop();
+         
     }
 
     /**

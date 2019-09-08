@@ -7,6 +7,9 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import java.applet.*;
+import java.io.File;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,6 +22,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  * @author sarve
  */
 public class lang extends javax.swing.JFrame {
+     File wavFile = new File("src\\beep-3.wav");
+    AudioClip sound;
+
 
     /**
      * Creates new form lang
@@ -80,10 +86,10 @@ public class lang extends javax.swing.JFrame {
         jPanel1.add(arroweng);
         arroweng.setBounds(830, 240, 90, 40);
 
-        ctlang.setFont(new java.awt.Font("Tahoma", 1, 32)); // NOI18N
-        ctlang.setText("choose the language");
+        ctlang.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        ctlang.setText("CHOOSE THE LANGUAGE");
         jPanel1.add(ctlang);
-        ctlang.setBounds(540, 180, 390, 70);
+        ctlang.setBounds(580, 180, 380, 70);
 
         atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atmbg);
@@ -122,6 +128,9 @@ public class lang extends javax.swing.JFrame {
 
     private void engbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_engbtActionPerformed
         // TODO add your handling code here:
+          try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
          cpin cp1=new cpin();
          cp1.setVisible(true);
          dispose();
