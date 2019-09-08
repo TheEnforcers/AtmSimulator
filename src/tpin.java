@@ -239,7 +239,7 @@ public class tpin extends javax.swing.JFrame {
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -78,15 +78,8 @@ public class ammount extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setLayout(null);
-
-        ammount.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        ammount.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ammountActionPerformed(evt);
-            }
-        });
         jPanel2.add(ammount);
-        ammount.setBounds(650, 290, 170, 50);
+        ammount.setBounds(620, 280, 190, 40);
 
         ammount_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         ammount_text.setText("ENTER  THE  AMOUNT");
@@ -221,7 +214,7 @@ public class ammount extends javax.swing.JFrame {
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         BG.setText("jLabel2");
         jPanel2.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -238,7 +231,10 @@ public class ammount extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-      i++;
+             try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
+        i++;
         j=i+1;
         if(j<7)
         {
@@ -251,7 +247,10 @@ public class ammount extends javax.swing.JFrame {
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-      i++;
+              try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
+        i++;
         j=i+1;
         if(j<7)
         {
@@ -264,7 +263,10 @@ public class ammount extends javax.swing.JFrame {
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-      i++;
+             try{sound = Applet.newAudioClip(wavFile.toURL());}
+    catch(Exception e){e.printStackTrace();}
+     sound.play();
+        i++;
         j=i+1;
         if(j<7)
         {
@@ -275,10 +277,6 @@ public class ammount extends javax.swing.JFrame {
          ammount.setText(string);
         display();                // TODO add your handling code here:
     }//GEN-LAST:event_b8ActionPerformed
-
-    private void ammountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ammountActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ammountActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         try{sound = Applet.newAudioClip(wavFile.toURL());}

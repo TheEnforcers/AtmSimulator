@@ -45,7 +45,7 @@ public class money extends javax.swing.JFrame {
                          c1.setVisible(true);
                         dispose();
                  }
-         } , 3000);
+         } , 1100);
         // sound.stop();
          
     }
