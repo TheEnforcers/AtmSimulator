@@ -59,27 +59,27 @@ public class money extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        THANK_text.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        THANK_text.setFont(new java.awt.Font("Tahoma", 1, 50)); // NOI18N
         THANK_text.setText("THANK ");
         jPanel1.add(THANK_text);
-        THANK_text.setBounds(610, 240, 230, 40);
+        THANK_text.setBounds(640, 260, 230, 60);
 
-        you.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        you.setFont(new java.awt.Font("Tahoma", 1, 50)); // NOI18N
         you.setText("YOU !!!");
         jPanel1.add(you);
-        you.setBounds(620, 310, 166, 58);
+        you.setBounds(650, 340, 176, 61);
 
         atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atm_bg);
-        atm_bg.setBounds(510, 190, 380, 240);
+        atm_bg.setBounds(530, 200, 400, 260);
 
-        gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/money1.gif"))); // NOI18N
+        gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/money 2.gif"))); // NOI18N
         jPanel1.add(gif);
-        gif.setBounds(350, 0, 700, 730);
+        gif.setBounds(370, 0, 720, 780);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(bg);
-        bg.setBounds(0, 0, 1370, 730);
+        bg.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,7 +89,7 @@ public class money extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
 
         pack();

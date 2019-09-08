@@ -42,16 +42,15 @@ public class wrongtpin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         EXIT = new javax.swing.JLabel();
-        cardslot = new javax.swing.JLabel();
         EXIT_ARROW = new javax.swing.JLabel();
         ENTER_PIN_AGAIN = new javax.swing.JLabel();
         ARROWENTER = new javax.swing.JLabel();
         OPTION = new javax.swing.JLabel();
         wrongpin = new javax.swing.JLabel();
         atmbg = new javax.swing.JLabel();
+        atm = new javax.swing.JLabel();
         exit = new javax.swing.JButton();
         renter = new javax.swing.JButton();
-        atm = new javax.swing.JLabel();
         mainbg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,26 +61,22 @@ public class wrongtpin extends javax.swing.JFrame {
         EXIT.setForeground(new java.awt.Color(255, 255, 255));
         EXIT.setText("EXIT");
         jPanel1.add(EXIT);
-        EXIT.setBounds(770, 300, 100, 40);
-
-        cardslot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(cardslot);
-        cardslot.setBounds(900, 460, 100, 60);
+        EXIT.setBounds(800, 330, 100, 40);
 
         EXIT_ARROW.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
         jPanel1.add(EXIT_ARROW);
-        EXIT_ARROW.setBounds(740, 300, 180, 40);
+        EXIT_ARROW.setBounds(760, 330, 180, 40);
 
         ENTER_PIN_AGAIN.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ENTER_PIN_AGAIN.setForeground(new java.awt.Color(255, 255, 255));
         ENTER_PIN_AGAIN.setText("ENTER PIN AGAIN");
         jPanel1.add(ENTER_PIN_AGAIN);
-        ENTER_PIN_AGAIN.setBounds(750, 260, 160, 15);
+        ENTER_PIN_AGAIN.setBounds(770, 285, 150, 40);
 
         ARROWENTER.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         ARROWENTER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
         jPanel1.add(ARROWENTER);
-        ARROWENTER.setBounds(740, 250, 200, 40);
+        ARROWENTER.setBounds(760, 285, 200, 40);
 
         OPTION.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         OPTION.setText("SELECT AN OPTION");
@@ -96,7 +91,12 @@ public class wrongtpin extends javax.swing.JFrame {
         atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         atmbg.setText("jLabel1");
         jPanel1.add(atmbg);
-        atmbg.setBounds(520, 190, 380, 240);
+        atmbg.setBounds(540, 185, 380, 240);
+
+        atm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
+        atm.setText("jLabel2");
+        jPanel1.add(atm);
+        atm.setBounds(370, 0, 720, 780);
 
         exit.setText("exit");
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +105,7 @@ public class wrongtpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(exit);
-        exit.setBounds(920, 280, 70, 20);
+        exit.setBounds(940, 335, 80, 30);
 
         renter.setText("renter");
         renter.addActionListener(new java.awt.event.ActionListener() {
@@ -114,26 +114,21 @@ public class wrongtpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(renter);
-        renter.setBounds(920, 250, 63, 23);
-
-        atm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
-        atm.setText("jLabel2");
-        jPanel1.add(atm);
-        atm.setBounds(350, 0, 720, 730);
+        renter.setBounds(940, 300, 70, 30);
 
         mainbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(mainbg);
-        mainbg.setBounds(0, 0, 1370, 760);
+        mainbg.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1375, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
 
         pack();
@@ -202,7 +197,6 @@ public class wrongtpin extends javax.swing.JFrame {
     private javax.swing.JLabel OPTION;
     private javax.swing.JLabel atm;
     private javax.swing.JLabel atmbg;
-    private javax.swing.JLabel cardslot;
     private javax.swing.JButton exit;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel mainbg;

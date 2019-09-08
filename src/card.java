@@ -68,12 +68,12 @@ public class card extends javax.swing.JFrame {
         Pls_insert.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Pls_insert.setText("please insert the card");
         jPanel1.add(Pls_insert);
-        Pls_insert.setBounds(600, 240, 260, 40);
+        Pls_insert.setBounds(600, 290, 260, 40);
 
         Welcome.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         Welcome.setText("Welcome");
         jPanel1.add(Welcome);
-        Welcome.setBounds(620, 190, 240, 40);
+        Welcome.setBounds(620, 210, 240, 40);
 
         atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atm_bg);
@@ -91,13 +91,11 @@ public class card extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

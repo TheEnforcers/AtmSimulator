@@ -84,29 +84,21 @@ public class balance extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        exit = new javax.swing.JButton();
         disp_name = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        exit_text = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         disp_bal = new javax.swing.JTextField();
         text = new javax.swing.JLabel();
         atm_white_bg = new javax.swing.JLabel();
-        card_slot = new javax.swing.JLabel();
         atm_bg = new javax.swing.JLabel();
+        exit = new javax.swing.JButton();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
-
-        exit.setText("EXIT");
-        exit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitActionPerformed(evt);
-            }
-        });
-        jPanel1.add(exit);
-        exit.setBounds(920, 280, 73, 23);
 
         disp_name.setEditable(false);
         disp_name.setBackground(new java.awt.Color(255, 255, 255));
@@ -121,14 +113,24 @@ public class balance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(disp_name);
-        disp_name.setBounds(700, 210, 90, 50);
+        disp_name.setBounds(700, 190, 200, 50);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("HELLO");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(600, 220, 100, 30);
+        jLabel2.setBounds(600, 200, 100, 30);
         jPanel1.add(jLabel1);
         jLabel1.setBounds(690, 330, 140, 40);
+
+        exit_text.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        exit_text.setForeground(new java.awt.Color(255, 255, 255));
+        exit_text.setText("EXIT");
+        jPanel1.add(exit_text);
+        exit_text.setBounds(850, 340, 50, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(830, 340, 120, 30);
 
         disp_bal.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         disp_bal.addActionListener(new java.awt.event.ActionListener() {
@@ -137,39 +139,44 @@ public class balance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(disp_bal);
-        disp_bal.setBounds(620, 310, 180, 60);
+        disp_bal.setBounds(630, 290, 190, 50);
 
         text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         text.setText("YOUR BALANCE IS :");
         jPanel1.add(text);
-        text.setBounds(590, 230, 250, 80);
+        text.setBounds(590, 240, 250, 50);
 
         atm_white_bg.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         atm_white_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atm_white_bg);
-        atm_white_bg.setBounds(520, 190, 380, 240);
+        atm_white_bg.setBounds(540, 185, 380, 240);
 
-        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(card_slot);
-        card_slot.setBounds(900, 460, 100, 60);
-
-        atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
+        atm_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
         jPanel1.add(atm_bg);
-        atm_bg.setBounds(350, 0, 720, 720);
+        atm_bg.setBounds(370, 0, 720, 780);
+
+        exit.setText("EXIT");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+        jPanel1.add(exit);
+        exit.setBounds(940, 330, 80, 30);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1377, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
 
         pack();
@@ -235,12 +242,13 @@ public class balance extends javax.swing.JFrame {
     private javax.swing.JLabel BG;
     private javax.swing.JLabel atm_bg;
     private javax.swing.JLabel atm_white_bg;
-    private javax.swing.JLabel card_slot;
     private javax.swing.JTextField disp_bal;
     private javax.swing.JTextField disp_name;
     private javax.swing.JButton exit;
+    private javax.swing.JLabel exit_text;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel text;
     // End of variables declaration//GEN-END:variables

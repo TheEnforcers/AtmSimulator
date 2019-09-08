@@ -43,30 +43,54 @@ public class service extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        card_slot = new javax.swing.JLabel();
         service_txt = new javax.swing.JLabel();
-        cash_withdrawal = new javax.swing.JButton();
-        balance = new javax.swing.JButton();
+        cash_with_txt = new javax.swing.JLabel();
         balance_txt = new javax.swing.JLabel();
         arrowbal = new javax.swing.JLabel();
-        cash_with_txt = new javax.swing.JLabel();
         arrowcw = new javax.swing.JLabel();
         atmbg = new javax.swing.JLabel();
         main_bg = new javax.swing.JLabel();
+        cash_withdrawal = new javax.swing.JButton();
+        balance = new javax.swing.JButton();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(card_slot);
-        card_slot.setBounds(900, 470, 120, 40);
-
         service_txt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         service_txt.setText("select the service");
         jPanel1.add(service_txt);
-        service_txt.setBounds(600, 170, 315, 80);
+        service_txt.setBounds(630, 170, 315, 80);
+
+        cash_with_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cash_with_txt.setForeground(new java.awt.Color(255, 255, 255));
+        cash_with_txt.setText("CASH WITHDRAWAL");
+        jPanel1.add(cash_with_txt);
+        cash_with_txt.setBounds(760, 240, 160, 40);
+
+        balance_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        balance_txt.setForeground(new java.awt.Color(255, 255, 255));
+        balance_txt.setText("BALANCE ENQUIRY");
+        jPanel1.add(balance_txt);
+        balance_txt.setBounds(765, 285, 160, 40);
+
+        arrowbal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
+        jPanel1.add(arrowbal);
+        arrowbal.setBounds(760, 285, 160, 40);
+
+        arrowcw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
+        jPanel1.add(arrowcw);
+        arrowcw.setBounds(760, 240, 170, 40);
+
+        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
+        jPanel1.add(atmbg);
+        atmbg.setBounds(540, 185, 380, 240);
+
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
+        main_bg.setText("jLabel2");
+        jPanel1.add(main_bg);
+        main_bg.setBounds(370, 0, 720, 780);
 
         cash_withdrawal.setText("cash");
         cash_withdrawal.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +99,7 @@ public class service extends javax.swing.JFrame {
             }
         });
         jPanel1.add(cash_withdrawal);
-        cash_withdrawal.setBounds(920, 250, 73, 23);
+        cash_withdrawal.setBounds(940, 237, 80, 30);
 
         balance.setText("balance");
         balance.addActionListener(new java.awt.event.ActionListener() {
@@ -84,54 +108,21 @@ public class service extends javax.swing.JFrame {
             }
         });
         jPanel1.add(balance);
-        balance.setBounds(920, 280, 71, 30);
-
-        balance_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        balance_txt.setForeground(new java.awt.Color(255, 255, 255));
-        balance_txt.setText("BALANCE ENQUIRY");
-        jPanel1.add(balance_txt);
-        balance_txt.setBounds(750, 290, 160, 40);
-
-        arrowbal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
-        jPanel1.add(arrowbal);
-        arrowbal.setBounds(740, 290, 160, 40);
-
-        cash_with_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cash_with_txt.setForeground(new java.awt.Color(255, 255, 255));
-        cash_with_txt.setText("CASH WITHDRAWAL");
-        jPanel1.add(cash_with_txt);
-        cash_with_txt.setBounds(740, 240, 160, 40);
-
-        arrowcw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ARROW3.jpg"))); // NOI18N
-        jPanel1.add(arrowcw);
-        arrowcw.setBounds(740, 240, 160, 40);
-
-        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
-        jPanel1.add(atmbg);
-        atmbg.setBounds(520, 190, 380, 240);
-
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
-        main_bg.setText("jLabel2");
-        jPanel1.add(main_bg);
-        main_bg.setBounds(350, 0, 720, 730);
+        balance.setBounds(940, 275, 80, 30);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
 
         pack();
@@ -198,7 +189,6 @@ public class service extends javax.swing.JFrame {
     private javax.swing.JLabel atmbg;
     private javax.swing.JButton balance;
     private javax.swing.JLabel balance_txt;
-    private javax.swing.JLabel card_slot;
     private javax.swing.JLabel cash_with_txt;
     private javax.swing.JButton cash_withdrawal;
     private javax.swing.JPanel jPanel1;

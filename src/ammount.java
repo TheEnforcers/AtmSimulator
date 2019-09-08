@@ -52,10 +52,13 @@ public class ammount extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         ammount = new javax.swing.JTextField();
+        ammount_text = new javax.swing.JLabel();
+        wbg = new javax.swing.JLabel();
+        atmbg = new javax.swing.JLabel();
         b4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         bthree = new javax.swing.JButton();
         b5 = new javax.swing.JButton();
+        b0 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
         b7 = new javax.swing.JButton();
         b8 = new javax.swing.JButton();
@@ -65,8 +68,6 @@ public class ammount extends javax.swing.JFrame {
         cancel = new javax.swing.JButton();
         b6 = new javax.swing.JButton();
         b1 = new javax.swing.JButton();
-        wbg = new javax.swing.JLabel();
-        atmbg = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,7 +80,20 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(ammount);
-        ammount.setBounds(630, 300, 170, 50);
+        ammount.setBounds(650, 290, 170, 50);
+
+        ammount_text.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        ammount_text.setText("ENTER  THE  AMOUNT");
+        jPanel2.add(ammount_text);
+        ammount_text.setBounds(600, 220, 290, 40);
+
+        wbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
+        jPanel2.add(wbg);
+        wbg.setBounds(540, 185, 380, 240);
+
+        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
+        jPanel2.add(atmbg);
+        atmbg.setBounds(370, 0, 720, 780);
 
         b4.setText("4");
         b4.addActionListener(new java.awt.event.ActionListener() {
@@ -88,12 +102,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b4);
-        b4.setBounds(570, 650, 60, 30);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("ENTER  THE  AMOUNT");
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(560, 220, 290, 40);
+        b4.setBounds(590, 640, 60, 30);
 
         bthree.setText("3");
         bthree.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +111,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(bthree);
-        bthree.setBounds(720, 600, 60, 30);
+        bthree.setBounds(740, 590, 60, 30);
 
         b5.setText("5");
         b5.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +120,16 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b5);
-        b5.setBounds(650, 650, 60, 30);
+        b5.setBounds(670, 640, 60, 30);
+
+        b0.setText("0");
+        b0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b0ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(b0);
+        b0.setBounds(670, 740, 60, 30);
 
         b2.setText("2");
         b2.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +138,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b2);
-        b2.setBounds(650, 600, 60, 30);
+        b2.setBounds(670, 590, 60, 30);
 
         b7.setText("7");
         b7.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +147,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b7);
-        b7.setBounds(570, 700, 60, 23);
+        b7.setBounds(590, 690, 60, 30);
 
         b8.setText("8");
         b8.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +156,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b8);
-        b8.setBounds(650, 700, 60, 23);
+        b8.setBounds(670, 690, 60, 30);
 
         b9.setText("9");
         b9.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +165,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b9);
-        b9.setBounds(720, 700, 60, 20);
+        b9.setBounds(740, 690, 60, 30);
 
         enter.setText("Enter");
         enter.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +174,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(enter);
-        enter.setBounds(790, 600, 60, 30);
+        enter.setBounds(810, 590, 70, 30);
 
         clear.setText("clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
@@ -165,7 +183,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(clear);
-        clear.setBounds(790, 650, 60, 23);
+        clear.setBounds(810, 640, 70, 30);
 
         cancel.setText("cancel");
         cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -174,7 +192,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(cancel);
-        cancel.setBounds(790, 693, 60, 30);
+        cancel.setBounds(810, 690, 70, 30);
 
         b6.setText("6");
         b6.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +201,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b6);
-        b6.setBounds(720, 650, 60, 30);
+        b6.setBounds(740, 640, 60, 30);
 
         b1.setText("1");
         b1.addActionListener(new java.awt.event.ActionListener() {
@@ -192,15 +210,7 @@ public class ammount extends javax.swing.JFrame {
             }
         });
         jPanel2.add(b1);
-        b1.setBounds(570, 600, 60, 30);
-
-        wbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
-        jPanel2.add(wbg);
-        wbg.setBounds(520, 190, 380, 240);
-
-        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
-        jPanel2.add(atmbg);
-        atmbg.setBounds(350, 0, 720, 730);
+        b1.setBounds(590, 590, 60, 30);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         BG.setText("jLabel2");
@@ -215,7 +225,7 @@ public class ammount extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
 
         pack();
@@ -397,6 +407,20 @@ public double getAm()
          dispose();
     }//GEN-LAST:event_cancelActionPerformed
 
+    private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
+        // TODO add your handling code here:
+        i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='0';
+        String string=new String(inpass);
+         ammount.setText(string);
+        display();                
+    }//GEN-LAST:event_b0ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -435,7 +459,9 @@ public double getAm()
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.JTextField ammount;
+    private javax.swing.JLabel ammount_text;
     private javax.swing.JLabel atmbg;
+    private javax.swing.JButton b0;
     private javax.swing.JButton b1;
     private javax.swing.JButton b2;
     private javax.swing.JButton b4;
@@ -448,7 +474,6 @@ public double getAm()
     private javax.swing.JButton cancel;
     private javax.swing.JButton clear;
     private javax.swing.JButton enter;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel wbg;
     // End of variables declaration//GEN-END:variables

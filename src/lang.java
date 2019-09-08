@@ -46,8 +46,6 @@ public class lang extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        engbt = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         hindi_text = new javax.swing.JLabel();
         arrowhin = new javax.swing.JLabel();
         english_txt = new javax.swing.JLabel();
@@ -55,44 +53,32 @@ public class lang extends javax.swing.JFrame {
         ctlang = new javax.swing.JLabel();
         atmbg = new javax.swing.JLabel();
         main_bg = new javax.swing.JLabel();
+        engbt = new javax.swing.JButton();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        engbt.setText("eng");
-        engbt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                engbtActionPerformed(evt);
-            }
-        });
-        jPanel1.add(engbt);
-        engbt.setBounds(930, 250, 50, 20);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(900, 470, 130, 40);
-
         hindi_text.setFont(new java.awt.Font("Adobe Devanagari", 1, 26)); // NOI18N
         hindi_text.setForeground(new java.awt.Color(255, 255, 255));
         hindi_text.setText(" हिंदी");
         jPanel1.add(hindi_text);
-        hindi_text.setBounds(830, 290, 40, 40);
+        hindi_text.setBounds(840, 290, 60, 40);
 
         arrowhin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
         jPanel1.add(arrowhin);
-        arrowhin.setBounds(810, 290, 90, 40);
+        arrowhin.setBounds(830, 290, 90, 40);
 
         english_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         english_txt.setForeground(new java.awt.Color(255, 255, 255));
         english_txt.setText("ENGLISH");
         jPanel1.add(english_txt);
-        english_txt.setBounds(820, 250, 70, 30);
+        english_txt.setBounds(840, 245, 70, 30);
 
         arroweng.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow2.jpg"))); // NOI18N
         jPanel1.add(arroweng);
-        arroweng.setBounds(810, 250, 90, 30);
+        arroweng.setBounds(830, 240, 90, 40);
 
         ctlang.setFont(new java.awt.Font("Tahoma", 1, 32)); // NOI18N
         ctlang.setText("choose the language");
@@ -101,25 +87,34 @@ public class lang extends javax.swing.JFrame {
 
         atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
         jPanel1.add(atmbg);
-        atmbg.setBounds(520, 190, 380, 240);
+        atmbg.setBounds(540, 185, 380, 240);
 
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
         jPanel1.add(main_bg);
-        main_bg.setBounds(350, 0, 952, 730);
+        main_bg.setBounds(370, 0, 720, 780);
+
+        engbt.setText("eng");
+        engbt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                engbtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(engbt);
+        engbt.setBounds(945, 240, 60, 30);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1370, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
 
         pack();
@@ -176,7 +171,6 @@ public class lang extends javax.swing.JFrame {
     private javax.swing.JButton engbt;
     private javax.swing.JLabel english_txt;
     private javax.swing.JLabel hindi_text;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
     // End of variables declaration//GEN-END:variables

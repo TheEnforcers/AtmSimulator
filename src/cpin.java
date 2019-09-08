@@ -60,6 +60,10 @@ public class cpin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        cpin_txt = new javax.swing.JLabel();
+        pinpass = new javax.swing.JPasswordField();
+        atmbg = new javax.swing.JLabel();
+        main_bg = new javax.swing.JLabel();
         b1 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
         b3 = new javax.swing.JButton();
@@ -69,20 +73,37 @@ public class cpin extends javax.swing.JFrame {
         b7 = new javax.swing.JButton();
         b8 = new javax.swing.JButton();
         b9 = new javax.swing.JButton();
+        b0 = new javax.swing.JButton();
         b_enter = new javax.swing.JButton();
         b_clear = new javax.swing.JButton();
         b_cancel = new javax.swing.JButton();
-        card_slot = new javax.swing.JLabel();
-        pinpass = new javax.swing.JPasswordField();
-        cpin_txt = new javax.swing.JLabel();
-        atmbg = new javax.swing.JLabel();
         pin1 = new javax.swing.JTextField();
-        main_bg = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
+
+        cpin_txt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        cpin_txt.setText("ENTER CUSTOMER PIN");
+        jPanel1.add(cpin_txt);
+        cpin_txt.setBounds(590, 210, 300, 60);
+
+        pinpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pinpassActionPerformed(evt);
+            }
+        });
+        jPanel1.add(pinpass);
+        pinpass.setBounds(640, 300, 200, 50);
+
+        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
+        jPanel1.add(atmbg);
+        atmbg.setBounds(540, 185, 380, 240);
+
+        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmgif0.jpg"))); // NOI18N
+        jPanel1.add(main_bg);
+        main_bg.setBounds(370, 0, 720, 780);
 
         b1.setText("1");
         b1.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +112,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b1);
-        b1.setBounds(570, 600, 60, 30);
+        b1.setBounds(590, 590, 70, 30);
 
         b2.setText("2");
         b2.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +121,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b2);
-        b2.setBounds(650, 600, 60, 30);
+        b2.setBounds(670, 590, 60, 30);
 
         b3.setText("3");
         b3.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +130,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b3);
-        b3.setBounds(720, 600, 60, 30);
+        b3.setBounds(740, 590, 60, 30);
 
         b4.setText("4");
         b4.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +139,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b4);
-        b4.setBounds(573, 650, 60, 30);
+        b4.setBounds(590, 640, 70, 30);
 
         b5.setText("5");
         b5.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +148,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b5);
-        b5.setBounds(650, 650, 60, 30);
+        b5.setBounds(670, 640, 60, 30);
 
         b6.setText("6");
         b6.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +157,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b6);
-        b6.setBounds(720, 650, 60, 30);
+        b6.setBounds(740, 640, 60, 30);
 
         b7.setText("7");
         b7.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +166,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b7);
-        b7.setBounds(570, 700, 60, 20);
+        b7.setBounds(590, 690, 70, 30);
 
         b8.setText("8");
         b8.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +175,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b8);
-        b8.setBounds(650, 700, 60, 20);
+        b8.setBounds(670, 690, 60, 30);
 
         b9.setText("9");
         b9.addActionListener(new java.awt.event.ActionListener() {
@@ -163,7 +184,16 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b9);
-        b9.setBounds(720, 700, 60, 20);
+        b9.setBounds(740, 690, 60, 30);
+
+        b0.setText("0");
+        b0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b0ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(b0);
+        b0.setBounds(660, 740, 70, 30);
 
         b_enter.setText("ENTER");
         b_enter.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +202,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b_enter);
-        b_enter.setBounds(790, 600, 60, 30);
+        b_enter.setBounds(810, 590, 70, 30);
 
         b_clear.setText("CLEAR");
         b_clear.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +211,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b_clear);
-        b_clear.setBounds(790, 650, 65, 30);
+        b_clear.setBounds(810, 640, 65, 30);
 
         b_cancel.setText("CANCEL");
         b_cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -190,28 +220,7 @@ public class cpin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(b_cancel);
-        b_cancel.setBounds(790, 700, 60, 20);
-
-        card_slot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cardslot2.jpg"))); // NOI18N
-        jPanel1.add(card_slot);
-        card_slot.setBounds(900, 470, 110, 40);
-
-        pinpass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pinpassActionPerformed(evt);
-            }
-        });
-        jPanel1.add(pinpass);
-        pinpass.setBounds(610, 310, 200, 40);
-
-        cpin_txt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        cpin_txt.setText("ENTER CUSTOMER PIN");
-        jPanel1.add(cpin_txt);
-        cpin_txt.setBounds(570, 220, 300, 60);
-
-        atmbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbg2.jpg"))); // NOI18N
-        jPanel1.add(atmbg);
-        atmbg.setBounds(520, 190, 380, 240);
+        b_cancel.setBounds(810, 690, 70, 30);
 
         pin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,13 +230,9 @@ public class cpin extends javax.swing.JFrame {
         jPanel1.add(pin1);
         pin1.setBounds(550, 370, 260, 40);
 
-        main_bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atmbgkey.jpg"))); // NOI18N
-        jPanel1.add(main_bg);
-        main_bg.setBounds(350, 0, 700, 730);
-
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/w1.jpg"))); // NOI18N
         jPanel1.add(BG);
-        BG.setBounds(0, 0, 1370, 730);
+        BG.setBounds(0, 0, 1370, 780);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -236,11 +241,11 @@ public class cpin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(287, 287, 287))
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 779, Short.MAX_VALUE)
         );
 
         pack();
@@ -439,6 +444,20 @@ public class cpin extends javax.swing.JFrame {
         pinpass.setText(string);
         displayc();
     }//GEN-LAST:event_b_clearActionPerformed
+
+    private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
+        // TODO add your handling code here:
+         i++;
+        j=i+1;
+        if(j<7)
+        {
+        inpass=new char[j];
+        }
+        pin[i]='0';
+        String string=new String(inpass);
+        pinpass.setText(string);
+        display();      
+    }//GEN-LAST:event_b0ActionPerformed
     public void displayc()
     {
           out=new String(pin);
@@ -556,6 +575,7 @@ public class cpin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.JLabel atmbg;
+    private javax.swing.JButton b0;
     private javax.swing.JButton b1;
     private javax.swing.JButton b2;
     private javax.swing.JButton b3;
@@ -568,7 +588,6 @@ public class cpin extends javax.swing.JFrame {
     private javax.swing.JButton b_cancel;
     private javax.swing.JButton b_clear;
     private javax.swing.JButton b_enter;
-    private javax.swing.JLabel card_slot;
     private javax.swing.JLabel cpin_txt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel main_bg;
