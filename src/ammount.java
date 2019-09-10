@@ -78,6 +78,8 @@ public class ammount extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setLayout(null);
+
+        ammount.setEditable(false);
         jPanel2.add(ammount);
         ammount.setBounds(620, 280, 190, 40);
 

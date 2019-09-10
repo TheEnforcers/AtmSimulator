@@ -95,6 +95,7 @@ public class cpin extends javax.swing.JFrame {
         jPanel1.add(cpin_txt);
         cpin_txt.setBounds(590, 210, 300, 60);
 
+        pinpass.setEditable(false);
         pinpass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pinpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

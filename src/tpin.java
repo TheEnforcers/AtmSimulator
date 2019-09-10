@@ -106,6 +106,7 @@ public class tpin extends javax.swing.JFrame {
         jPanel1.add(disp_name);
         disp_name.setBounds(700, 209, 210, 40);
 
+        passfield.setEditable(false);
         passfield.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel1.add(passfield);
         passfield.setBounds(640, 330, 180, 50);

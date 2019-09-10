@@ -140,6 +140,7 @@ public class balance extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(830, 340, 120, 30);
 
+        disp_bal.setEditable(false);
         disp_bal.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         disp_bal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
