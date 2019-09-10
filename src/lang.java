@@ -68,7 +68,8 @@ public class lang extends javax.swing.JFrame {
 
         hindi_text.setFont(new java.awt.Font("Adobe Devanagari", 1, 26)); // NOI18N
         hindi_text.setForeground(new java.awt.Color(255, 255, 255));
-        hindi_text.setText(" हिंदी");
+        hindi_text.setIcon(new javax.swing.ImageIcon("C:\\Users\\My\\Downloads\\HINDI (2).jpg")); // NOI18N
+        hindi_text.setText(" हिंदी ");
         jPanel1.add(hindi_text);
         hindi_text.setBounds(840, 290, 60, 40);
 
