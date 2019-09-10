@@ -468,6 +468,9 @@ public class cpin extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(cpin.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println(p);
+        System.out.println(h);
+        System.out.println(bal[p]);
        
     }//GEN-LAST:event_b_enterActionPerformed
 
@@ -525,14 +528,13 @@ public class cpin extends javax.swing.JFrame {
        //System.out.println(cp[r]);
        if(out.equals(cp[r])==true)
         {
-            
-            return 1;
+           return 1;
             
           //  System.out.println("dhfjhfj");
         }
-       r++;
+        r++;
         p++;
-        h=p;
+        h=p; 
           }
        return 0;/*
        else
@@ -568,6 +570,7 @@ public class cpin extends javax.swing.JFrame {
     public int disp(){
             return h;
     } 
+   
        
     
 

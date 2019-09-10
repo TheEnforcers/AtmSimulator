@@ -28,7 +28,8 @@ public class balance extends javax.swing.JFrame {
   // public String cp_bal[]=new String[20];
     //  String out; 
        int p;
-     static double bal[]=new double[10];
+       
+      static double bal[]=new double[20];
      String name[]=new String[20];
     
       //   cpin c1=new cpin();

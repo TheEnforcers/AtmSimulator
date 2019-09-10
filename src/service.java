@@ -64,9 +64,9 @@ public class service extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         service_txt.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        service_txt.setText("select the service");
+        service_txt.setText("SELECT THE SERVICE");
         jPanel1.add(service_txt);
-        service_txt.setBounds(630, 170, 315, 80);
+        service_txt.setBounds(610, 170, 315, 80);
 
         cash_with_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cash_with_txt.setForeground(new java.awt.Color(255, 255, 255));

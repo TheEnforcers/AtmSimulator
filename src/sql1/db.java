@@ -25,7 +25,7 @@ import org.apache.derby.iapi.sql.PreparedStatement;
 public class db{
    // String cpin; 
     int row;
-      static  int p;
+  //    static  int p;
    //  static double  amu[]=new double[20];
    //  static String tp[]=new String[20];
      int i=0;
